@@ -18,7 +18,7 @@ const experience = defineCollection({
     loader: glob({
         pattern: "**/*.md",
         base: "./src/content/experience"
-    }),
+      }),
     schema: z.object({
         title: z.string(),
         logo: z.string(),
@@ -43,6 +43,7 @@ const projects = defineCollection({
     })
 });
 
+// The Loader for your site settings
 const site = defineCollection({
     loader: file("./src/content/site/config.json"),
     schema: z.object({
@@ -107,4 +108,4 @@ export const collections = {
     site,
     notes,
     bookmarks,
-}; 
+};

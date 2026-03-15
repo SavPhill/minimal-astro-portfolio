@@ -1,17 +1,20 @@
 ---
 import Section from "../components/ui/Section.astro";
-import { getCollection, getEntry } from "astro:content";
+import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
 import BaseLayout from "../components/layout/BaseLayout.astro";
 import ContentList from "../components/shared/ContentList.astro";
 import Container from "../components/ui/Container.astro";
 
-const siteConfig = await getEntry("site", "home");
-if (!siteConfig) {
-  throw new Error("Site configuration not found");
-}
+// BYPASS THE LOADER: Direct import for the global config
+import siteData from "../content/site/config.json";
 
-const site = siteConfig.data;
+// Handle both array and object formats just in case
+const site = Array.isArray(siteData) ? siteData[0] : siteData;
+
+if (!site) {
+  throw new Error("Site configuration import failed. Check file path: src/content/site/config.json");
+}
 
 const formatDate = (date: Date | undefined) => {
   if (!date) return "";
@@ -24,6 +27,7 @@ const formatDate = (date: Date | undefined) => {
 const posts = await getCollection("blog", ({ data }: CollectionEntry<"blog">) => {
   return import.meta.env.PROD ? !data.draft : true;
 });
+
 const latestPosts = posts
   .sort(
     (a: CollectionEntry<"blog">, b: CollectionEntry<"blog">) =>
@@ -31,6 +35,7 @@ const latestPosts = posts
   )
   .slice(0, 3);
 
+// Collections for hidden sections (keeping logic so it doesn't break)
 const experiences = await getCollection("experience");
 const sortedExperiences = experiences.sort(
   (a: CollectionEntry<"experience">, b: CollectionEntry<"experience">) =>
@@ -60,7 +65,6 @@ const featuredProjects = projects.filter((project: CollectionEntry<"projects">) 
       }
     </section>
 
-   
     <Section>
       <div class="section-header">
         <h2>{site.sections.blog.title}</h2>
@@ -82,63 +86,13 @@ const featuredProjects = projects.filter((project: CollectionEntry<"projects">) 
         }
       </ContentList>
     </Section>
- 
-    {/* --- PROJECTS SECTION HIDDEN ---
-    <section class="section">
-      <div class="section-header">
-        <h2>{site.sections.projects.title}</h2>
-        <a href="/projects">{site.sections.projects.viewAllText}</a>
-      </div>
-      <ContentList>
-        {
-          featuredProjects.map((project) => (
-            <article>
-              <div class="title-row">
-                <a href={project.data.url} target="_blank" rel="noopener noreferrer">
-                  {project.data.title}
-                </a>
-              </div>
-              <p class="muted-text">{project.data.description}</p>
-              {project.data.techs && (
-                <div class="tags">
-                  {project.data.techs.map((tech) => (
-                    <span>{tech}</span>
-                  ))}
-                </div>
-              )}
-            </article>
-          ))
-        }
-      </ContentList>
-    </section>
-    */}
 
-    {/* --- EXPERIENCE SECTION HIDDEN ---
-    <section class="section">
-      <div class="section-header">
-        <h2>{site.sections.experience.title}</h2>
-        <a href="/experience">{site.sections.experience.viewAllText}</a>
-      </div>
-      <div class="content-list">
-        {
-          sortedExperiences.slice(0, 2).map((exp) => (
-            <article>
-              <div class="title-row">
-                <div class="company-info">
-                  <img src={exp.data.logo} alt="" class="company-logo" />
-                  <span>{exp.data.title}</span>
-                </div>
-                <time>
-                  {formatDate(exp.data.startDate)} - {exp.data.current ? "Present" : formatDate(exp.data.endDate)}
-                </time>
-              </div>
-              <p class="muted-text">{exp.data.description}</p>
-            </article>
-          ))
-        }
-      </div>
-    </section>
-    */}
+    {/* --- PROJECTS SECTION HIDDEN --- */}
+    {/* <section class="section"> ... </section> */}
+
+    {/* --- EXPERIENCE SECTION HIDDEN --- */}
+    {/* <section class="section"> ... </section> */}
+
   </Container>
 </BaseLayout>
 
@@ -157,10 +111,7 @@ const featuredProjects = projects.filter((project: CollectionEntry<"projects">) 
   .introduction {
     margin: 1.5rem 0;
     opacity: 0.9;
-  }
-
-  .section {
-    margin: 4rem 0;
+    white-space: pre-line; /* Keeps your bio formatting */
   }
 
   .section-header {
@@ -179,35 +130,6 @@ const featuredProjects = projects.filter((project: CollectionEntry<"projects">) 
     font-size: var(--text-sm);
   }
 
-  .company-info {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-  }
-
-  .company-logo {
-    width: 1.5rem;
-    height: 1.5rem;
-    object-fit: contain;
-  }
-
-  time {
-    font-size: var(--text-xs);
-    opacity: 0.5;
-    white-space: nowrap;
-  }
-
-  .tags {
-    display: flex;
-    gap: 0.75rem;
-    margin-top: 0.5rem;
-  }
-
-  .tags span {
-    font-size: var(--text-xs);
-    opacity: 0.5;
-  }
-
   .social-links {
     display: flex;
     gap: 1rem;
@@ -216,16 +138,8 @@ const featuredProjects = projects.filter((project: CollectionEntry<"projects">) 
   }
 
   @media (max-width: 640px) {
-    main {
-      padding: 1rem 0;
-    }
-
     .hero {
       padding: 3rem 0;
-    }
-
-    .container {
-      padding: 0 1rem;
     }
   }
 </style>
