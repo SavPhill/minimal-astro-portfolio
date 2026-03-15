@@ -1,4 +1,4 @@
-# Free Minimal Astro Portfolio
+# Psavage.net Portfolio
 
 A modern, minimalist portfolio website built with Astro and deployed on Cloudflare Pages. Features a collection of writings, projects, and professional experiences.
 
