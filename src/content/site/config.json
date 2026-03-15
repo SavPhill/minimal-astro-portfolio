@@ -1,7 +1,7 @@
 {
   "name": "Phill",
   "title": "Digital Transformation Consultant",
-  "introduction": "Helping businesses untangle messy tech and automate manual workflows...",
+  "introduction": "Helping businesses untangle messy tech and automate manual workflows.",
   "sections": {
     "blog": { "title": "Writing", "viewAllText": "View all posts" },
     "projects": { "title": "Projects", "viewAllText": "View all projects" },
