@@ -4,10 +4,10 @@ export type NavigationItem = {
 };
 
 export const SITE = {
-    name: "ByteKai",
-    title: "Software Engineer & Curious Tinkerer",
-    description: "Personal portfolio and blog",
-    url: "https://bytekai.dev",
+    name: "Phill",
+    title: "Digital Transformation Consultant",
+    description: "Digital Transformation Consultant",
+    url: "https://psavage.net",
     defaultImage: "/default-og-image.jpg",
 } as const;
 
@@ -36,4 +36,4 @@ export const META = {
     twitter: {
         cardType: "summary_large_image",
     }
-} as const; 
+} as const;
