@@ -1,8 +1,8 @@
 {
   "home": {
-    "name": "ByteKai",
-    "title": "Software Engineer & Curious Tinkerer",
-    "introduction": "I’m constantly learning and evolving. I love diving into new ideas and finding creative ways to solve problems.",
+    "name": "Phill",
+    "title": "Digital Transformation Consultant",
+    "introduction": "Helping businesses untangle messy tech and automate manual workflows. Strategic Fractional CTO services to improve efficiency, security, and digital ROI.",
     "sections": {
       "blog": {
         "title": "Writing",
@@ -12,19 +12,15 @@
         "title": "Projects",
         "viewAllText": "View all projects"
       },
-      "experience": {
-        "title": "Experience",
-        "viewAllText": "View full résumé"
-      }
-    },
+      
     "socialLinks": [
       {
         "platform": "GitHub",
-        "url": "https://github.com/bytekai"
+        "url": "https://github.com/savphill"
       },
       {
         "platform": "Twitter",
-        "url": "https://x.com/byteekai"
+        "url": "https://x.com/savphill"
       }
     ]
   }
