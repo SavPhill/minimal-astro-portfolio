@@ -1,5 +1,5 @@
 import { defineCollection, z } from "astro:content";
-import { glob, file } from "astro/loaders";
+import { glob } from "astro/loaders"; // Removed 'file' since we aren't using it here
 
 const blog = defineCollection({
     loader: glob({
@@ -43,34 +43,6 @@ const projects = defineCollection({
     })
 });
 
-// The Loader for your site settings
-const site = defineCollection({
-    loader: file("./src/content/site/config.json"),
-    schema: z.object({
-        name: z.string(),
-        title: z.string(),
-        introduction: z.string(),
-        sections: z.object({
-            blog: z.object({
-                title: z.string(),
-                viewAllText: z.string(),
-            }),
-            projects: z.object({
-                title: z.string(),
-                viewAllText: z.string(),
-            }),
-            experience: z.object({
-                title: z.string(),
-                viewAllText: z.string(),
-            }),
-        }),
-        socialLinks: z.array(z.object({
-            platform: z.string(),
-            url: z.string().url(),
-        })).optional(),
-    })
-});
-
 const notes = defineCollection({
     loader: glob({
         pattern: "**/*.md",
@@ -101,11 +73,11 @@ const bookmarks = defineCollection({
     })
 });
 
+// IMPORTANT: 'site' is removed from here to prevent Netlify build errors
 export const collections = {
     blog,
     experience,
     projects,
-    site,
     notes,
     bookmarks,
 };
