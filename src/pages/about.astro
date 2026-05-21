@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE } from '../config/site';
+---
+
+<BaseLayout title="About" description={`About ${SITE.name} — ${SITE.title}`}>
+  <div class="max-w-3xl mx-auto">
+    <header class="mb-12 text-center" transition:animate="fade">
+      <h1 class="text-5xl mb-4">About</h1>
+      <p class="text-xl text-muted-foreground">{SITE.title}</p>
+    </header>
+
+    <div class="prose prose-lg dark:prose-invert max-w-none" transition:animate="fade">
+      <p>{SITE.description}</p>
+      <p>
+        I write about AI visibility, generative search, and hospitality tech. Browse the
+        <a href="/journal">journal</a> for posts, or read
+        <a href="/posts/whoami">who I am and why this site exists</a>.
+      </p>
+    </div>
+  </div>
+</BaseLayout>

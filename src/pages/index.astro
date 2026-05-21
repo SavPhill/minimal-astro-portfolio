@@ -1,62 +1,38 @@
 ---
-import Section from "../components/ui/Section.astro";
-import { getCollection } from "astro:content";
-import type { CollectionEntry } from "astro:content";
-import BaseLayout from "../components/layout/BaseLayout.astro";
-import ContentList from "../components/shared/ContentList.astro";
-import Container from "../components/ui/Container.astro";
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PostList from '../components/PostList.astro';
+import { getCollection } from 'astro:content';
+import { SITE, SOCIAL_LINKS } from '../config/site';
 
-// BYPASS THE LOADER: Direct import for the global config
-import siteData from "../content/site/config.json";
-
-// Handle both array and object formats just in case
-const site = Array.isArray(siteData) ? siteData[0] : siteData;
-
-if (!site) {
-  throw new Error("Site configuration import failed. Check file path: src/content/site/config.json");
-}
-
-const formatDate = (date: Date | undefined) => {
-  if (!date) return "";
-  return date.toLocaleDateString("en-US", {
-    month: "short",
-    day: "numeric",
-  });
-};
-
-const posts = await getCollection("blog", ({ data }: CollectionEntry<"blog">) => {
-  return import.meta.env.PROD ? !data.draft : true;
-});
-
-const latestPosts = posts
-  .sort(
-    (a: CollectionEntry<"blog">, b: CollectionEntry<"blog">) =>
-      b.data.publishedAt.getTime() - a.data.publishedAt.getTime()
-  )
-  .slice(0, 3);
-
-// Collections for hidden sections (keeping logic so it doesn't break)
-const experiences = await getCollection("experience");
-const sortedExperiences = experiences.sort(
-  (a: CollectionEntry<"experience">, b: CollectionEntry<"experience">) =>
-    b.data.startDate.getTime() - a.data.startDate.getTime()
+const allPosts = await getCollection('posts');
+const sortedPosts = allPosts.sort(
+  (a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf()
 );
 
-const projects = await getCollection("projects");
-const featuredProjects = projects.filter((project: CollectionEntry<"projects">) => project.data.featured).slice(0, 3);
+const posts = sortedPosts.slice(0, 5).map((post) => ({
+  ...post,
+  url: `/posts/${post.id}`,
+  frontmatter: post.data,
+}));
 ---
 
-<BaseLayout title={`${site.name} - Portfolio`} description={site.introduction}>
-  <Container>
-    <section class="hero">
-      <h1>{site.name}</h1>
-      <p class="subtitle">{site.title}</p>
-      <p class="introduction">{site.introduction}</p>
+<BaseLayout title={SITE.headline} description={SITE.description} pageTitle={SITE.headline}>
+  <div class="max-w-4xl mx-auto">
+    <section class="text-center py-[8vh]" transition:animate="fade">
+      <h1 class="text-4xl md:text-6xl mb-8 font-bold leading-tight">{SITE.headline}</h1>
+      <p class="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-10 leading-relaxed">
+        {SITE.description}
+      </p>
       {
-        site.socialLinks && (
-          <div class="social-links">
-            {site.socialLinks.map(({ platform, url }) => (
-              <a href={url} target="_blank" rel="noopener noreferrer">
+        SOCIAL_LINKS.length > 0 && (
+          <div class="flex flex-wrap justify-center gap-4 text-sm">
+            {SOCIAL_LINKS.map(({ platform, url }) => (
+              <a
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 hover:underline"
+              >
                 {platform}
               </a>
             ))}
@@ -65,81 +41,30 @@ const featuredProjects = projects.filter((project: CollectionEntry<"projects">) 
       }
     </section>
 
-    <Section>
-      <div class="section-header">
-        <h2>{site.sections.blog.title}</h2>
-        <a href="/blog">{site.sections.blog.viewAllText}</a>
-      </div>
-      <ContentList>
-        {
-          latestPosts.map((post) => (
-            <article>
-              <div class="title-row">
-                <a href={`/blog/${post.id}`}>{post.data.title}</a>
-                {post.data.publishedAt && (
-                  <time datetime={post.data.publishedAt.toISOString()}>{formatDate(post.data.publishedAt)}</time>
-                )}
-              </div>
-              <p class="muted-text">{post.data.description}</p>
-            </article>
-          ))
-        }
-      </ContentList>
-    </Section>
+    {
+      posts.length > 0 && (
+        <section class="mx-auto" transition:animate="fade">
+          <h2 class="text-sm uppercase tracking-wide text-gray-500 dark:text-gray-500 mb-8 text-center">
+            Writing
+          </h2>
+          <PostList
+            posts={posts}
+            showImages={false}
+            showExcerpt={false}
+            showSeparators={true}
+            showTags={false}
+          />
 
-    {/* --- PROJECTS SECTION HIDDEN --- */}
-    {/* <section class="section"> ... </section> */}
-
-    {/* --- EXPERIENCE SECTION HIDDEN --- */}
-    {/* <section class="section"> ... </section> */}
-
-  </Container>
-</BaseLayout>
-
-<style>
-  main {
-    width: 100%;
-    max-width: 640px;
-    margin: 0 auto;
-    padding: 2rem 0;
-  }
-
-  .hero {
-    padding: 4rem 0;
-  }
-
-  .introduction {
-    margin: 1.5rem 0;
-    opacity: 0.9;
-    white-space: pre-line; /* Keeps your bio formatting */
-  }
-
-  .section-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 2rem;
-    opacity: 0.7;
-  }
-
-  .title-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    gap: 1rem;
-    font-size: var(--text-sm);
-  }
-
-  .social-links {
-    display: flex;
-    gap: 1rem;
-    margin-top: 2rem;
-    opacity: 0.7;
-  }
-
-  @media (max-width: 640px) {
-    .hero {
-      padding: 3rem 0;
+          <div class="text-center mt-24">
+            <a
+              href="/journal"
+              class="text-lg font-medium text-black dark:text-white py-2 px-4 rounded-md inline-block focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 hover:underline"
+            >
+              View all posts <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </section>
+      )
     }
-  }
-</style>
+  </div>
+</BaseLayout>

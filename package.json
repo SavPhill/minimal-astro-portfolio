@@ -11,14 +11,21 @@
     "cf-typegen": "wrangler types"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "^12.1.0",
-    "@fontsource/inter": "^5.1.1",
-    "@fontsource/roboto-mono": "^5.1.1",
-    "@fontsource/source-sans-pro": "^5.1.0",
-    "astro": "^5.1.2"
+    "@astrojs/mdx": "^5.0.3",
+    "@astrojs/rss": "^4.0.18",
+    "@astrojs/sitemap": "^3.7.2",
+    "astro": "^6.1.7",
+    "date-fns": "^4.1.0"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20241230.0",
+    "@tailwindcss/postcss": "^4.2.2",
+    "@tailwindcss/typography": "^0.5.10",
+    "@tailwindcss/vite": "^4.2.2",
+    "autoprefixer": "^10.4.21",
+    "tailwindcss": "^4.2.2",
+    "typescript": "^5.3.3",
+    "vite": "^6.0.0",
     "wrangler": "^3.99.0"
   }
 }

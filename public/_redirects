@@ -1,0 +1,4 @@
+/blog/*  /posts/:splat  301
+/blog    /journal       301
+/notes   /journal       301
+/bookmarks  /journal    301
