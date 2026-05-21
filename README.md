@@ -1,4 +1,17 @@
+
 # Phill — Personal Site
+=======
+# Psavage.net Portfolio
+
+A modern, minimalist portfolio website built with Astro and deployed on Cloudflare Pages. Features a collection of writings, projects, and professional experiences.
+
+![alt text](image.png)
+
+## Overview
+
+This is a personal portfolio website for ByteKai, a Software Engineer and Curious Tinkerer. The site showcases blog posts, technical notes, project work, and professional experience in a clean, fast-loading format.
+
+
 
 A minimalist personal site built with [Astro Brook](https://github.com/holger1411/astro-brook), deployed on [Cloudflare Pages](https://pages.cloudflare.com).
 
