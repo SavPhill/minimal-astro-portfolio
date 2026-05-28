@@ -1,5 +1,5 @@
 ---
-title: "GEO vs. SEO: Why Your Business is Being \"Ghosted\" by AI (And the 2026 Blueprint to Fix It)"
+title: "Why Your Business is Being \"Ghosted\" by AI (And the 2026 Blueprint to Fix It)"
 metaTitle: "GEO vs. SEO: Why AI Search is Changing Everything in 2026"
 metaDescription: "Is traditional SEO enough? Discover the shift to Generative Engine Optimization (GEO). Learn how 10+ years of expertise at Ace MS Thailand helps you win on ChatGPT & Gemini."
 date: 2026-05-21

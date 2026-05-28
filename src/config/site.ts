@@ -1,9 +1,9 @@
 export const SITE = {
-  name: "Phill",
-  headline: "Phill | AI Visibility Specialist",
-  title: "AI Visibility Specialist",
+  name: "Phill Savage",
+  headline: "Get mentioned by AI",
+  title: "Generative Search Architect",
   description:
-    "Search has changed from \"Links\" to \"Answers.\" I help hospitality brands move from being buried in Google to being cited by AI. I fix the technical gaps that keep your hotel from being recommended by the world's most powerful virtual concierges.",
+    "Search has changed from \"Links\" to \"Answers.\" I help brands move from being buried in Google to being cited by AI.",
   url: "https://psavage.net",
   author: "Phill",
 } as const;

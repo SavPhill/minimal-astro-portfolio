@@ -3,20 +3,49 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { SITE } from '../config/site';
 ---
 
-<BaseLayout title="About" description={`About ${SITE.name} — ${SITE.title}`}>
+<BaseLayout title="About Phill" description={`About Phill — Generative Search Architect at psavage.net`}>
   <div class="max-w-3xl mx-auto">
     <header class="mb-12 text-center" transition:animate="fade">
-      <h1 class="text-5xl mb-4">About</h1>
-      <p class="text-xl text-muted-foreground">{SITE.title}</p>
+      <h1 class="text-5xl mb-4 font-bold tracking-tight">The Architect behind the Answers.</h1>
+      <p class="text-xl text-muted-foreground italic">10 years in the trenches. 1 mission: AI Visibility.</p>
     </header>
 
-    <div class="prose prose-lg dark:prose-invert max-w-none" transition:animate="fade">
-      <p>{SITE.description}</p>
+    <div class="prose prose-lg dark:prose-invert max-w-none leading-relaxed" transition:animate="fade">
       <p>
-        I write about AI visibility, generative search, and hospitality tech. Browse the
-        <a href="/journal">journal</a> for posts, or read
-        <a href="/posts/whoami">who I am and why this site exists</a>.
+        I’ve spent the last decade navigating the intersection of business logic and messy technology. Most of that time has been spent as a core part of the team at <strong>Ace Marketing Solutions (Ace MS)</strong> in Thailand, helping over 100 brands—from luxury resorts to scale-ups—find their footing in an increasingly crowded digital landscape.
       </p>
+
+      <h3 class="text-2xl font-bold mt-8 mb-4 text-blue-600">Why "Architect"?</h3>
+      <p>
+        In 2026, the term "Consultant" feels too passive. Consultants give advice; Architects build. 
+      </p>
+      <p>
+        Search has evolved from a list of blue links into a complex conversational ecosystem. Today, my work is about <strong>Generative Search Architecture</strong>. I build the technical bridges that allow AI models like ChatGPT, Gemini, and Perplexity to retrieve, trust, and recommend your brand.
+      </p>
+
+      <h3 class="text-2xl font-bold mt-8 mb-4">The Strategy</h3>
+      <p>
+        I specialize in <strong>GEO (Generative Engine Optimization)</strong> and <strong>GSO (Generative Search Optimization)</strong>. This isn't just about keywords anymore—it's about entity authority, factual consistency, and eliminating "hallucinations" that cost you revenue. 
+      </p>
+      
+      <p>
+        Whether it’s protecting a hotel from "OTA commission leaks" or ensuring a professional service is the primary cited choice in an AI response, I focus on the technical infrastructure that drives measurable growth.
+      </p>
+
+      <hr class="my-10 border-slate-200" />
+
+      <p class="text-sm text-muted-foreground">
+        When I’m not untangling data structures, I’m usually tinkering with minimalist web tech (like this Astro site) or documenting the shift to the "Answer Era" in my <a href="/journal">journal</a>.
+      </p>
+      
+      <div class="mt-10 text-center">
+  <a 
+    href="mailto:hello@psavage.net?subject=Consulting%20Inquiry%20—%20Generative%20Search" 
+    class="inline-block bg-blue-600 text-white px-8 py-4 rounded-md font-bold no-underline hover:bg-blue-700 hover:scale-105 transition-all duration-300 shadow-lg shadow-blue-600/20"
+  >
+    Work with me
+  </a>
+</div>
     </div>
   </div>
 </BaseLayout>

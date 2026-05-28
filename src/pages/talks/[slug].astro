@@ -1,0 +1,54 @@
+---
+import { getCollection, render } from 'astro:content';
+import PostLayout from '../../layouts/PostLayout.astro';
+
+// Generate static paths specifically for talks
+export async function getStaticPaths() {
+  // 1. Filter talks only
+  const allTalks = await getCollection('talks');
+
+  // Sort talks by date (newest first)
+  const sortedTalks = allTalks.sort((a, b) =>
+    new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf()
+  );
+
+  return sortedTalks.map((entry, index) => {
+    // 2. Ensure navigation links stay within the /talks/ directory
+    const prevPost = sortedTalks[index - 1]
+      ? {
+          url: `/talks/${sortedTalks[index - 1].id}`,
+          title: sortedTalks[index - 1].data.title
+        }
+      : null;
+
+    const nextPost = sortedTalks[index + 1]
+      ? {
+          url: `/talks/${sortedTalks[index + 1].id}`,
+          title: sortedTalks[index + 1].data.title
+        }
+      : null;
+
+    return {
+      params: { slug: entry.id },
+      props: { entry, prevPost, nextPost },
+    };
+  });
+}
+
+// Get the talk and navigation data for this page
+const { entry, prevPost, nextPost } = Astro.props;
+const { Content } = await render(entry);
+---
+
+{/* We use PostLayout here to keep the "Architect" design consistent, 
+  passing the talk data into the frontmatter prop.
+*/}
+<PostLayout frontmatter={entry.data} prevPost={prevPost} nextPost={nextPost}>
+  <div class="talk-metadata mb-8 pb-8 border-b border-slate-100 dark:border-slate-800">
+    <p class="text-blue-600 font-bold text-sm uppercase tracking-widest mb-2">Public Presentation</p>
+    {entry.data.event && <p class="text-lg font-medium">Event: {entry.data.event}</p>}
+    {entry.data.location && <p class="text-muted-foreground italic">{entry.data.location}</p>}
+  </div>
+
+  <Content />
+</PostLayout>

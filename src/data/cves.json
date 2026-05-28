@@ -1,0 +1,507 @@
+[
+  {
+    "title": "WordPress <= 6.8.2 – Authenticated (Author+) Stored Cross-Site Scripting",
+    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-core/wordpress-682-authenticated-author-stored-cross-site-scripting-2?asset_slug=wordpress",
+    "cveId": "CVE-2025-58674",
+    "cveUrl": "https://www.cve.org/CVERecord?id=CVE-2025-58674",
+    "cvss": "6.4",
+    "date": "September 22, 2025",
+    "vdp": "HackerOne",
+    "featured": true
+  },
+  {
+    "title": "Woostify <= 2.4.2 – Authenticated (Shop manager+) Stored Cross-Site Scripting",
+    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-themes/woostify/woostify-242-authenticated-shop-manager-stored-cross-site-scripting",
+    "cveId": "CVE-2025-60101",
+    "cveUrl": "https://www.cve.org/CVERecord?id=CVE-2025-60101",
+    "cvss": "4.4",
+    "date": "September 26, 2025",
+    "vdp": "WordFence"
+  },
+  {
+    "title": "Colibri Page Builder < 1.0.334 – Authenticated (Shop manager+) Stored Cross-Site Scripting",
+    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/colibri-page-builder/colibri-page-builder-10334-authenticated-shop-manager-stored-cross-site-scripting",
+    "cveId": "CVE-2025-59593",
+    "cveUrl": "https://www.cve.org/CVERecord?id=CVE-2025-59593",
+    "cvss": "4.4",
+    "date": "September 22, 2025",
+    "vdp": "WordFence"
+  },
+  {
+    "title": "Blocksy <= 2.0.97 – Missing Authorization",
+    "url": "#",
+    "cveId": "CVE-2025-47465",
+    "cveUrl": "https://www.cve.org/CVERecord?id=CVE-2025-47465",
+    "cvss": "2.7",
+    "date": "May 7, 2025",
+    "vdp": "Patchstack"
+  },
+  {
+    "title": "Advanced Woo Labels <= 2.15 – Authenticated (Contributor+) Stored Cross-Site Scripting",
+    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/advanced-woo-labels/advanced-woo-labels-215-authenticated-contributor-stored-cross-site-scripting",
+    "cveId": "CVE-2025-32188",
+    "cveUrl": "https://www.cve.org/CVERecord?id=CVE-2025-32188",
+    "cvss": "6.4",
+    "date": "April 4, 2025",
+    "vdp": "Patchstack"
+  },
+  {
+    "title": "CMP – Coming Soon & Maintenance <= 4.1.13 – Authenticated (Admin+) Arbitrary File Upload",
+    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/cmp-coming-soon-maintenance/cmp-coming-soon-maintenance-4113-authenticated-admin-arbitrary-file-upload",
+    "cveId": "CVE-2025-32118",
+    "cveUrl": "https://www.cve.org/CVERecord?id=CVE-2025-32118",
+    "cvss": "7.2",
+    "date": "April 4, 2025",
+    "vdp": "Patchstack"
+  },
+  {
+    "title": "WP Proposals <= 2.3 – Authenticated (Editor+) Stored Cross-Site Scripting",
+    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/wp-proposals/wp-proposals-23-authenticated-editor-stored-cross-site-scripting",
+    "cveId": "CVE-2025-31837",
+    "cveUrl": "https://www.cve.org/CVERecord?id=CVE-2025-31837",
+    "cvss": "4.4",
+    "date": "April 1, 2025",
+    "vdp": "Patchstack"
+  },
+  {
+    "title": "TablePress – Tables in WordPress made easy <= 3.0.4 – Authenticated (Author+) Stored Cross-Site Scripting",
+    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/tablepress/tablepress-tables-in-wordpress-made-easy-304-authenticated-author-stored-cross-site-scripting",
+    "cveId": "CVE-2025-2685",
+    "cveUrl": "https://www.cve.org/CVERecord?id=CVE-2025-2685",
+    "cvss": "6.4",
+    "date": "March 26, 2025",
+    "vdp": "WordFence"
+  },
+  {
+    "title": "WooCommerce <= 9.7.0 – Authenticated (Shop Manager+) Stored Cross-Site Scripting",
+    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/woocommerce/woocommerce-970-authenticated-shop-manager-stored-cross-site-scripting",
+    "cveId": "CVE-2025-26762",
+    "cveUrl": "https://www.cve.org/CVERecord?id=CVE-2025-26762",
+    "cvss": "4.4",
+    "date": "March 12, 2025",
+    "vdp": "HackerOne"
+  },
+  {
+    "title": "Document Block – Upload & Embed Docs <= 1.1.0 – Missing Authorization",
+    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/document/document-block-upload-embed-docs-110-missing-authorization",
+    "cveId": "CVE-2025-22696",
+    "cveUrl": "https://www.cve.org/CVERecord?id=CVE-2025-22696",
+    "cvss": "4.3",
+    "date": "January 31, 2025",
+    "vdp": "Patchstack"
+  },
+  {
+    "title": "PPOM for WooCommerce <= 33.0.8 – Authenticated (Administrator+) Stored Cross-Site Scripting",
+    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/woocommerce-product-addon/ppom-for-woocommerce-3308-authenticated-administrator-stored-cross-site-scripting",
+    "cveId": "CVE-2025-24668",
+    "cveUrl": "https://www.cve.org/CVERecord?id=CVE-2025-24668",
+    "cvss": "4.4",
+    "date": "January 24, 2025",
+    "vdp": "Patchstack"
+  },
+  {
+    "title": "WooCommerce PDF Invoices, Packing Slips, Delivery Notes and Shipping Labels <= 4.7.1 – Authenticated (Shop Manager+) Stored Cross-Site Scripting",
+    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/print-invoices-packing-slip-labels-for-woocommerce/woocommerce-pdf-invoices-packing-slips-delivery-notes-and-shipping-labels-471-authenticated-shop-manager-stored-cross-site-scripting",
+    "cveId": "CVE-2025-24644",
+    "cveUrl": "https://www.cve.org/CVERecord?id=CVE-2025-24644",
+    "cvss": "4.4",
+    "date": "January 24, 2025",
+    "vdp": "Patchstack"
+  },
+  {
+    "title": "Popup Maker <= 1.20.2 – Authenticated (Contributor+) Stored Cross-Site Scripting",
+    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/popup-maker/popup-maker-1202-authenticated-contributor-stored-cross-site-scripting",
+    "cveId": "CVE-2025-24746",
+    "cveUrl": "https://www.cve.org/CVERecord?id=CVE-2025-24746",
+    "cvss": "6.4",
+    "date": "January 24, 2025",
+    "vdp": "Patchstack"
+  },
+  {
+    "title": "Icegram <= 3.1.31 – Authenticated (Contributor+) Stored Cross-Site Scripting",
+    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/icegram/icegram-3131-authenticated-contributor-stored-cross-site-scripting",
+    "cveId": "CVE-2025-24542",
+    "cveUrl": "https://www.cve.org/CVERecord?id=CVE-2025-24542",
+    "cvss": "6.4",
+    "date": "January 24, 2025",
+    "vdp": "Patchstack"
+  },
+  {
+    "title": "Flexible PDF Coupons <= 1.10.2 – Authenticated (Contributor+) Stored Cross-Site Scripting",
+    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/flexible-coupons/flexible-pdf-coupons-1102-authenticated-contributor-stored-cross-site-scripting",
+    "cveId": "CVE-2025-22825",
+    "cveUrl": "https://www.cve.org/CVERecord?id=CVE-2025-22825",
+    "cvss": "6.4",
+    "date": "January 15, 2025",
+    "vdp": "Patchstack"
+  },
+  {
+    "title": "Htaccess File Editor <= 1.0.19 – Unauthenticated Information Exposure",
+    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/htaccess-file-editor/htaccess-file-editor-1019-unauthenticated-information-exposure",
+    "cveId": "CVE-2025-22773",
+    "cveUrl": "https://www.cve.org/CVERecord?id=CVE-2025-22773",
+    "cvss": "5.3",
+    "date": "January 14, 2025",
+    "vdp": "Patchstack"
+  },
+  {
+    "title": "WebToffee WP Backup and Migration <= 1.5.3 – Unauthenticated Sensitive Information Exposure",
+    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/wp-migration-duplicator/webtoffee-wp-backup-and-migration-153-unauthenticated-sensitive-information-exposure",
+    "cveId": "CVE-2025-24651",
+    "cveUrl": "https://www.cve.org/CVERecord?id=CVE-2025-24651",
+    "cvss": "5.3",
+    "date": "January 13, 2025",
+    "vdp": "Patchstack"
+  },
+  {
+    "title": "Modula Image Gallery <= 2.11.10 – Authenticated (Author+) Arbitrary File Upload",
+    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/modula-best-grid-gallery/modula-image-gallery-21110-authenticated-author-arbitrary-file-upload",
+    "cveId": "CVE-2024-12853",
+    "cveUrl": "https://www.cve.org/CVERecord?id=CVE-2024-12853",
+    "cvss": "8.8",
+    "date": "January 7, 2025",
+    "vdp": "WordFence"
+  },
+  {
+    "title": "Email Templates Customizer for WordPress – Drag And Drop Email Templates Builder – YeeMail <= 2.1.4 – Authenticated (Contributor+) Stored Cross-Site Scripting",
+    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/yeemail/email-templates-customizer-for-wordpress-drag-and-drop-email-templates-builder-yeemail-214-authenticated-contributor-stored-cross-site-scripting",
+    "cveId": "CVE-2025-22802",
+    "cveUrl": "https://www.cve.org/CVERecord?id=CVE-2025-22802",
+    "cvss": "6.4",
+    "date": "January 7, 2025",
+    "vdp": "Patchstack"
+  },
+  {
+    "title": "Typing Text <= 1.2.7 – Authenticated (Contributor+) Stored Cross-Site Scripting",
+    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/typing-text/typing-text-127-authenticated-contributor-stored-cross-site-scripting",
+    "cveId": "CVE-2025-22315",
+    "cveUrl": "https://www.cve.org/CVERecord?id=CVE-2025-22315",
+    "cvss": "6.4",
+    "date": "January 6, 2025",
+    "vdp": "Patchstack"
+  },
+  {
+    "title": "New User Approve <= 2.6.2 – Missing Authorization",
+    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/new-user-approve/new-user-approve-262-missing-authorization",
+    "cveId": "CVE-2024-54323",
+    "cveUrl": "https://www.cve.org/CVERecord?id=CVE-2024-54323",
+    "cvss": "4.3",
+    "date": "December 11, 2024",
+    "vdp": "Patchstack"
+  },
+  {
+    "title": "Landing Page Cat <= 1.7.4 – Missing Authorization",
+    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/landing-page-cat/landing-page-cat-174-missing-authorization",
+    "cveId": "CVE-2024-49686",
+    "cveUrl": "https://www.cve.org/CVERecord?id=CVE-2024-49686",
+    "cvss": "4.3",
+    "date": "October 21, 2024",
+    "vdp": "Patchstack"
+  },
+  {
+    "title": "Email Template Customizer for WooCommerce <= 1.2.9.1 – Authenticated (Shop manager+) Stored Cross-Site Scripting",
+    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/email-template-customizer-for-woo/email-template-customizer-for-woocommerce-125-authenticated-shop-manager-stored-cross-site-scripting",
+    "cveId": "CVE-2024-49288",
+    "cveUrl": "https://www.cve.org/CVERecord?id=CVE-2024-49288",
+    "cvss": "4.4",
+    "date": "October 15, 2024",
+    "vdp": "Patchstack"
+  },
+  {
+    "title": "Htaccess File Editor <= 1.0.18 – Missing Authorization",
+    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/htaccess-file-editor/htaccess-file-editor-1018-missing-authorization",
+    "cveId": "CVE-2024-49256",
+    "cveUrl": "https://www.cve.org/CVERecord?id=CVE-2024-49256",
+    "cvss": "4.3",
+    "date": "October 14, 2024",
+    "vdp": "Patchstack"
+  },
+  {
+    "title": "Essential Blocks for Gutenberg <= 4.8.4 – Authenticated (Contributor+) Stored Cross-Site Scripting",
+    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/essential-blocks/essential-blocks-for-gutenberg-484-authenticated-contributor-stored-cross-site-scripting",
+    "cveId": "CVE-2024-47385",
+    "cveUrl": "https://www.cve.org/CVERecord?id=CVE-2024-47385",
+    "cvss": "6.4",
+    "date": "September 30, 2024",
+    "vdp": "Patchstack"
+  },
+  {
+    "title": "Depicter Slider <= 3.2.2 – Authenticated (Editor+) Stored Cross-Site Scripting",
+    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/depicter/depicter-slider-322-authenticated-editor-stored-cross-site-scripting",
+    "cveId": "CVE-2024-47381",
+    "cveUrl": "https://www.cve.org/CVERecord?id=CVE-2024-47381",
+    "cvss": "4.4",
+    "date": "September 30, 2024",
+    "vdp": "Patchstack"
+  },
+  {
+    "title": "Advanced Woo Labels <= 2.01 – Authenticated (Contributor+) Stored Cross-Site Scripting",
+    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/advanced-woo-labels/advanced-woo-labels-201-authenticated-contributor-stored-cross-site-scripting",
+    "cveId": "CVE-2024-47622",
+    "cveUrl": "https://www.cve.org/CVERecord?id=CVE-2024-47622",
+    "cvss": "6.4",
+    "date": "September 30, 2024",
+    "vdp": "Patchstack"
+  },
+  {
+    "title": "WS Form LITE <= 1.9.238 – Unauthenticated Stored Cross-Site Scripting",
+    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/ws-form/ws-form-lite-19238-unauthenticated-stored-cross-site-scripting",
+    "cveId": "CVE-2024-47320",
+    "cveUrl": "https://www.cve.org/CVERecord?id=CVE-2024-47320",
+    "cvss": "6.1",
+    "date": "September 25, 2024",
+    "vdp": "Patchstack"
+  },
+  {
+    "title": "Icegram <= 3.1.25 – Authenticated (Contributor+) Stored Cross-Site Scripting",
+    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/icegram/icegram-3125-authenticated-contributor-stored-cross-site-scripting",
+    "cveId": "CVE-2024-43344",
+    "cveUrl": "https://www.cve.org/CVERecord?id=CVE-2024-43344",
+    "cvss": "6.4",
+    "date": "August 16, 2024",
+    "vdp": "Patchstack"
+  },
+  {
+    "title": "WP Table Builder – WordPress Table Plugin <= 1.4.15 – Authenticated (Contributor+) Stored Cross-Site Scripting",
+    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/wp-table-builder/wp-table-builder-wordpress-table-plugin-1415-authenticated-contributor-stored-cross-site-scripting",
+    "cveId": "CVE-2024-43125",
+    "cveUrl": "https://www.cve.org/CVERecord?id=CVE-2024-43125",
+    "cvss": "6.4",
+    "date": "August 7, 2024",
+    "vdp": "Patchstack"
+  },
+  {
+    "title": "3D FlipBook – PDF Flipbook Viewer, Flipbook Image Gallery <= 1.15.6 – Authenticated (Editor+) Stored Cross-Site Scripting",
+    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/interactive-3d-flipbook-powered-physics-engine/3d-flipbook-pdf-flipbook-viewer-flipbook-image-gallery-1156-authenticated-editor-stored-cross-site-scripting",
+    "cveId": "CVE-2024-43152",
+    "cveUrl": "https://www.cve.org/CVERecord?id=CVE-2024-43152",
+    "cvss": "4.4",
+    "date": "August 7, 2024",
+    "vdp": "Patchstack"
+  },
+  {
+    "title": "Depicter Slider <= 3.1.2 – Authenticated (Editor+) Stored Cross-Site Scripting",
+    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/depicter/depicter-slider-312-authenticated-editor-stored-cross-site-scripting",
+    "cveId": "CVE-2024-43161",
+    "cveUrl": "https://www.cve.org/CVERecord?id=CVE-2024-43161",
+    "cvss": "4.4",
+    "date": "August 7, 2024",
+    "vdp": "Patchstack"
+  },
+  {
+    "title": "VK All in One Expansion Unit <= 9.99.1.0 – Authenticated (Contributor+) Stored Cross-Site Scripting",
+    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/vk-all-in-one-expansion-unit/vk-all-in-one-expansion-unit-99810-authenticated-contributor-stored-cross-site-scripting",
+    "cveId": "CVE-2024-37956",
+    "cveUrl": "https://www.cve.org/CVERecord?id=CVE-2024-37956",
+    "cvss": "6.4",
+    "date": "July 10, 2024",
+    "vdp": "Patchstack"
+  },
+  {
+    "title": "Fusion <= 1.6.1 – Authenticated (Contributor+) Stored Cross-Site Scripting",
+    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/fusion/fusion-161-authenticated-contributor-stored-cross-site-scripting",
+    "cveId": "CVE-2024-37962",
+    "cveUrl": "https://www.cve.org/CVERecord?id=CVE-2024-37962",
+    "cvss": "6.4",
+    "date": "July 10, 2024",
+    "vdp": "Patchstack"
+  },
+  {
+    "title": "WooCommerce <= 8.9.2 – Authenticated (Shop Manager+) Content Injection",
+    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/woocommerce/woocommerce-892-authenticated-shop-manager-content-injection",
+    "cveId": "CVE-2024-35777",
+    "cveUrl": "https://www.cve.org/CVERecord?id=CVE-2024-35777",
+    "cvss": "2.7",
+    "date": "June 27, 2024",
+    "vdp": "HackerOne"
+  },
+  {
+    "title": "Page Builder Sandwich – Front-End Page Builder <= 5.1.0 – Missing Authorization",
+    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/page-builder-sandwich/page-builder-sandwich-front-end-page-builder-510-missing-authorization",
+    "cveId": "CVE-2024-37218",
+    "cveUrl": "https://www.cve.org/CVERecord?id=CVE-2024-37218",
+    "cvss": "4.3",
+    "date": "June 21, 2024",
+    "vdp": "Patchstack"
+  },
+  {
+    "title": "Page Builder Sandwich – Front-End Page Builder <= 5.1.0 – Authenticated (Contributor+) Stored Cross-Site Scripting",
+    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/page-builder-sandwich/page-builder-sandwich-front-end-page-builder-510-authenticated-contributor-stored-cross-site-scripting",
+    "cveId": "CVE-2024-37219",
+    "cveUrl": "https://www.cve.org/CVERecord?id=CVE-2024-37219",
+    "cvss": "6.4",
+    "date": "June 21, 2024",
+    "vdp": "Patchstack"
+  },
+  {
+    "title": "Page Builder: Live Composer <= 1.5.47 – Authenticated (Author+) Stored Cross-Site Scripting",
+    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/live-composer-page-builder/page-builder-live-composer-1542-authenticated-author-stored-cross-site-scripting",
+    "cveId": "CVE-2024-35768",
+    "cveUrl": "https://www.cve.org/CVERecord?id=CVE-2024-35768",
+    "cvss": "6.4",
+    "date": "June 18, 2024",
+    "vdp": "Patchstack"
+  },
+  {
+    "title": "PPOM for WooCommerce <= 32.0.20 – Unauthenticated Content Injection Vulnerability",
+    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/woocommerce-product-addon/ppom-for-woocommerce-32020-unauthenticated-content-injection-vulnerability",
+    "cveId": "CVE-2024-35728",
+    "cveUrl": "https://www.cve.org/CVERecord?id=CVE-2024-35728",
+    "cvss": "5.3",
+    "date": "June 6, 2024",
+    "vdp": "Patchstack"
+  },
+  {
+    "title": "YITH WooCommerce Product Add-Ons <= 4.9.2 – Unauthenticated Content Injection",
+    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/yith-woocommerce-product-add-ons/yith-woocommerce-product-add-ons-492-unauthenticated-content-injection",
+    "cveId": "CVE-2024-35680",
+    "cveUrl": "https://www.cve.org/CVERecord?id=CVE-2024-35680",
+    "cvss": "5.3",
+    "date": "June 6, 2024",
+    "vdp": "Patchstack"
+  },
+  {
+    "title": "Woody code snippets – Insert Header Footer Code, AdSense Ads <= 2.4.10 – Authenticated (Admin+) Stored Cross-Site Scripting",
+    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/insert-php/woody-code-snippets-insert-header-footer-code-adsense-ads-2410-authenticated-admin-stored-cross-site-scripting",
+    "cveId": "CVE-2024-35751",
+    "cveUrl": "https://www.cve.org/CVERecord?id=CVE-2024-35751",
+    "cvss": "4.4",
+    "date": "June 6, 2024",
+    "vdp": "Patchstack"
+  },
+  {
+    "title": "YITH WooCommerce Tab Manager <= 1.35.0 – Authenticated (Editor+) Stored Cross-Site Scripting",
+    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/yith-woocommerce-tab-manager/yith-woocommerce-tab-manager-1350-authenticated-editor-stored-cross-site-scripting",
+    "cveId": "CVE-2024-35698",
+    "cveUrl": "https://www.cve.org/CVERecord?id=CVE-2024-35698",
+    "cvss": "4.4",
+    "date": "June 6, 2024",
+    "vdp": "Patchstack"
+  },
+  {
+    "title": "Advanced Woo Labels – Product Labels for WooCommerce <= 1.93 – Authenticated (Contributor+) Stored Cross-Site Scripting",
+    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/advanced-woo-labels/advanced-woo-labels-product-labels-for-woocommerce-193-authenticated-contributor-stored-cross-site-scripting",
+    "cveId": "CVE-2024-35675",
+    "cveUrl": "https://www.cve.org/CVERecord?id=CVE-2024-35675",
+    "cvss": "6.4",
+    "date": "June 5, 2024",
+    "vdp": "Patchstack"
+  },
+  {
+    "title": "Visual Composer Website Builder <= 45.8.0 – Authenticated (Editor+) Stored Cross-Site Scripting",
+    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/visualcomposer/visual-composer-website-builder-4580-authenticated-editor-stored-cross-site-scripting",
+    "cveId": "CVE-2024-35653",
+    "cveUrl": "https://www.cve.org/CVERecord?id=CVE-2024-35653",
+    "cvss": "4.4",
+    "date": "June 3, 2024",
+    "vdp": "Patchstack"
+  },
+  {
+    "title": "Brave – Create Popup, Optins, Lead Generation, Survey, Sticky Elements & Interactive Content <= 0.6.9 – Authenticated (Admin+) Stored Cross-Site Scripting",
+    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/brave-popup-builder/brave-create-popup-optins-lead-generation-survey-sticky-elements-interactive-content-068-authenticated-admin-stored-cross-site-scripting",
+    "cveId": "CVE-2024-35655",
+    "cveUrl": "https://www.cve.org/CVERecord?id=CVE-2024-35655",
+    "cvss": "4.4",
+    "date": "June 3, 2024",
+    "vdp": "Patchstack"
+  },
+  {
+    "title": "YITH WooCommerce Wishlist <= 3.32.0 – Authenticated (Admin+) Stored Cross-Site Scripting",
+    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/yith-woocommerce-wishlist/yith-woocommerce-wishlist-3320-authenticated-admin-stored-cross-site-scripting",
+    "cveId": "CVE-2024-34385",
+    "cveUrl": "https://www.cve.org/CVERecord?id=CVE-2024-34385",
+    "cvss": "4.4",
+    "date": "May 30, 2024",
+    "vdp": "Patchstack"
+  },
+  {
+    "title": "Pootle Pagebuilder – WordPress Page builder <= 5.7.1 – Authenticated (Contributor+) Stored Cross-Site Scripting",
+    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/pootle-page-builder/pootle-pagebuilder-wordpress-page-builder-571-authenticated-contributor-stored-cross-site-scripting",
+    "cveId": "CVE-2024-34573",
+    "cveUrl": "https://www.cve.org/CVERecord?id=CVE-2024-34573",
+    "cvss": "6.4",
+    "date": "May 7, 2024",
+    "vdp": "Patchstack"
+  },
+  {
+    "title": "Page Builder: Live Composer <= 1.5.38 – Missing Authorization",
+    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/live-composer-page-builder/page-builder-live-composer-1538-missing-authorization",
+    "cveId": "CVE-2024-32957",
+    "cveUrl": "https://www.cve.org/CVERecord?id=CVE-2024-32957",
+    "cvss": "4.3",
+    "date": "April 23, 2024",
+    "vdp": "Patchstack"
+  },
+  {
+    "title": "Fixed HTML Toolbar <= 1.0.7 – Authenticated (Admin+) Stored Cross-Site Scripting",
+    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/fixed-html-toolbar/fixed-html-toolbar-107-authenticated-admin-stored-cross-site-scripting",
+    "cveId": "CVE-2024-32540",
+    "cveUrl": "https://www.cve.org/CVERecord?id=CVE-2024-32540",
+    "cvss": "4.4",
+    "date": "April 15, 2024",
+    "vdp": "Patchstack"
+  },
+  {
+    "title": "Remove Footer Credit <= 1.0.13 – Authenticated (Administrator+) Stored Cross-Site Scripting",
+    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/remove-footer-credit/remove-footer-credit-1013-authenticated-administrator-stored-cross-site-scripting",
+    "cveId": "CVE-2024-32429",
+    "cveUrl": "https://www.cve.org/CVERecord?id=CVE-2024-32429",
+    "cvss": "4.4",
+    "date": "April 12, 2024",
+    "vdp": "Patchstack"
+  },
+  {
+    "title": "WordPress Page Builder – Zion Builder <= 3.6.9 – Authenticated (Editor+) Stored Cross-Site Scripting",
+    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/zionbuilder/wordpress-page-builder-zion-builder-369-authenticated-editor-stored-cross-site-scripting",
+    "cveId": "CVE-2024-30444",
+    "cveUrl": "https://www.cve.org/CVERecord?id=CVE-2024-30444",
+    "cvss": "4.4",
+    "date": "March 28, 2024",
+    "vdp": "Patchstack"
+  },
+  {
+    "title": "Astra <= 4.6.4 – Authenticated (Editor+) Stored Cross-Site Scripting via Theme Header/Footer",
+    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-themes/astra/astra-464-authenticated-editor-stored-cross-site-scripting-via-theme-headerfooter",
+    "cveId": "CVE-2024-29768",
+    "cveUrl": "https://www.cve.org/CVERecord?id=CVE-2024-29768",
+    "cvss": "5.5",
+    "date": "March 25, 2024",
+    "vdp": "Patchstack"
+  },
+  {
+    "title": "Post and Page Builder by BoldGrid – Visual Drag and Drop Editor Plugin <= 1.26.2 – Authenticated (Contributor+) Stored Cross-Site Scripting",
+    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/post-and-page-builder/post-and-page-builder-by-boldgrid-visual-drag-and-drop-editor-plugin-1262-authenticated-contributor-stored-cross-site-scripting",
+    "cveId": "CVE-2024-2888",
+    "cveUrl": "https://www.cve.org/CVERecord?id=CVE-2024-2888",
+    "cvss": "6.4",
+    "date": "March 25, 2024",
+    "vdp": "Patchstack"
+  },
+  {
+    "title": "Visual Composer Website Builder <= 45.6.0 – Authenticated (Editor+) Stored Cross-Site Scripting",
+    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/visualcomposer/visual-composer-website-builder-4560-authenticated-editor-stored-cross-site-scripting",
+    "cveId": "CVE-2024-27997",
+    "cveUrl": "https://www.cve.org/CVERecord?id=CVE-2024-27997",
+    "cvss": "4.4",
+    "date": "March 15, 2024",
+    "vdp": "Patchstack"
+  },
+  {
+    "title": "Blocksy <= 2.0.19 – Authenticated (Editor+) Stored Cross-Site Scripting",
+    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-themes/blocksy/blocksy-2019-authenticated-editor-stored-cross-site-scripting",
+    "cveId": "CVE-2024-24871",
+    "cveUrl": "https://www.cve.org/CVERecord?id=CVE-2024-24871",
+    "cvss": "4.4",
+    "date": "February 5, 2024",
+    "vdp": "Patchstack"
+  },
+  {
+    "title": "Scroll Triggered Box <= 2.3 – Authenticated (Editor+) Stored Cross-Site Scripting",
+    "url": "https://www.wordfence.com/threat-intel/vulnerabilities/wordpress-plugins/dreamgrow-scroll-triggered-box/scroll-triggered-box-23-authenticated-editor-stored-cross-site-scripting",
+    "cveId": "CVE-2024-24865",
+    "cveUrl": "https://www.cve.org/CVERecord?id=CVE-2024-24865",
+    "cvss": "5.5",
+    "date": "February 2, 2024",
+    "vdp": "Patchstack"
+  }
+]
