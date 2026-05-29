@@ -5,47 +5,72 @@ import { SITE } from '../config/site';
 
 <BaseLayout title="About Phill" description={`About Phill — Generative Search Architect at psavage.net`}>
   <div class="max-w-3xl mx-auto">
-    <header class="mb-12 text-center" transition:animate="fade">
-      <h1 class="text-5xl mb-4 font-bold tracking-tight">The Architect behind the Answers.</h1>
-      <p class="text-xl text-muted-foreground italic">10 years in the trenches. 1 mission: AI Visibility.</p>
+    
+    <header class="mb-12 border-b border-slate-100 dark:border-slate-800 pb-8" transition:animate="fade">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 items-center">
+        <!-- Profile Photo Asset -->
+        <div class="md:col-span-1 flex justify-start">
+          <img 
+            src="/images/phill.jpg" 
+            alt="Phill Savage — Generative Search Architect" 
+            class="w-32 h-32 md:w-full md:h-auto rounded-full md:rounded-xl object-cover grayscale hover:grayscale-0 transition-all duration-300 border-2 border-slate-200 dark:border-slate-700 shadow-sm"
+          />
+        </div>
+        <!-- Primary Value Proposition Header -->
+        <div class="md:col-span-3">
+          <h1 class="text-4xl md:text-5xl mb-4 font-bold tracking-tight text-slate-900 dark:text-white">I make sure AI models recommend your business.</h1>
+          <p class="text-xl text-muted-foreground">Ten years managing website projects. Now structuring data for the Answer Era.</p>
+        </div>
+      </div>
     </header>
 
     <div class="prose prose-lg dark:prose-invert max-w-none leading-relaxed" transition:animate="fade">
       <p>
-        I’ve spent the last decade navigating the intersection of business logic and messy technology. Most of that time has been spent as a core part of the team at <strong>Ace Marketing Solutions (Ace MS)</strong> in Thailand, helping over 100 brands—from luxury resorts to scale-ups—find their footing in an increasingly crowded digital landscape.
-      </p>
-
-      <h3 class="text-2xl font-bold mt-8 mb-4 text-blue-600">Why "Architect"?</h3>
-      <p>
-        In 2026, the term "Consultant" feels too passive. Consultants give advice; Architects build. 
-      </p>
-      <p>
-        Search has evolved from a list of blue links into a complex conversational ecosystem. Today, my work is about <strong>Generative Search Architecture</strong>. I build the technical bridges that allow AI models like ChatGPT, Gemini, and Perplexity to retrieve, trust, and recommend your brand.
-      </p>
-
-      <h3 class="text-2xl font-bold mt-8 mb-4">The Strategy</h3>
-      <p>
-        I specialize in <strong>GEO (Generative Engine Optimization)</strong> and <strong>GSO (Generative Search Optimization)</strong>. This isn't just about keywords anymore—it's about entity authority, factual consistency, and eliminating "hallucinations" that cost you revenue. 
+        I’ve spent the last decade leading technical website projects from the ground up. Most of that time has been spent running operations as a core part of the team at <strong>Ace Marketing Solutions (Ace MS Thailand)</strong>. 
       </p>
       
       <p>
-        Whether it’s protecting a hotel from "OTA commission leaks" or ensuring a professional service is the primary cited choice in an AI response, I focus on the technical infrastructure that drives measurable growth.
+        Over the last 9+ years, I’ve directly managed the strategy, development, and deployment of web infrastructure for <strong>over 100 brands</strong>—ranging from high-end luxury boutique resorts in southern Thailand to fast-growing B2B scale-ups. 
       </p>
 
-      <hr class="my-10 border-slate-200" />
+      <h3 class="text-2xl font-bold mt-8 mb-4 text-blue-600">From SEO to Generative Search Architecture</h3>
+      <p>
+        Traditional SEO is shifting underneath us. Users are swapping Google's list of blue links for conversational summaries on ChatGPT, Gemini, and Perplexity. If your data isn't structured correctly, your brand simply doesn't exist to these models.
+      </p>
+      
+      <p>
+        That’s why I don’t call myself a marketing consultant anymore. I focus strictly on <strong>Generative Search Architecture</strong>. I build and optimize the technical bridges—schemas, knowledge graphs, and authoritative entity networks—that AI engines crawl, trust, and cite.
+      </p>
+
+      <h3 class="text-2xl font-bold mt-8 mb-4">What I Actually Do (The Strategy)</h3>
+      <p>
+        My day-to-day focuses on execution-level <strong>GEO (Generative Engine Optimization)</strong> and <strong>GSO (Generative Search Optimization)</strong>. This isn't about keyword stuffing; it’s about establishing clean, unshakeable entity authority across the web so AI models don't hallucinate your data or ignore your brand.
+      </p>
+      
+      <p>
+        In practice, that means solving concrete business problems:
+      </p>
+      
+      <ul>
+        <li>Plugging <strong>OTA commission leaks</strong> for hospitality clients by ensuring AI assistants route bookings directly to the hotel’s native booking engine instead of Agoda or Booking.com.</li>
+        <li>Structuring company data so B2B platforms are cited as the primary, authoritative option when buyers ask an AI for software or service recommendations.</li>
+        <li>Auditing and repairing fragmented digital footprints that cause LLMs (Large Language Models) to display outdated pricing, incorrect locations, or competing services.</li>
+      </ul>
+
+      <hr class="my-10 border-slate-200 dark:border-slate-800" />
 
       <p class="text-sm text-muted-foreground">
-        When I’m not untangling data structures, I’m usually tinkering with minimalist web tech (like this Astro site) or documenting the shift to the "Answer Era" in my <a href="/journal">journal</a>.
+        When I’m not auditing knowledge bases or cleaning up metadata schemas, I’m usually building lightweight web projects with Astro or writing about the operational realities of digital strategy in my <a href="/journal">journal</a>.
       </p>
       
       <div class="mt-10 text-center">
-  <a 
-    href="mailto:hello@psavage.net?subject=Consulting%20Inquiry%20—%20Generative%20Search" 
-    class="inline-block bg-blue-600 text-white px-8 py-4 rounded-md font-bold no-underline hover:bg-blue-700 hover:scale-105 transition-all duration-300 shadow-lg shadow-blue-600/20"
-  >
-    Work with me
-  </a>
-</div>
+        <a 
+          href="mailto:hello@psavage.net?subject=Consulting%20Inquiry%20—%20Generative%20Search" 
+          class="inline-block bg-blue-600 text-white px-8 py-4 rounded-md font-bold no-underline hover:bg-blue-700 hover:scale-105 transition-all duration-300 shadow-lg shadow-blue-600/20"
+        >
+          Let's talk strategy
+        </a>
+      </div>
     </div>
   </div>
 </BaseLayout>
