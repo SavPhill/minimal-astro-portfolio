@@ -1,76 +1,112 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { SITE } from '../config/site';
 ---
 
-<BaseLayout title="About Phill" description={`About Phill — Generative Search Architect at psavage.net`}>
-  <div class="max-w-3xl mx-auto">
+<BaseLayout title="About Phill" description={`About Phill — Generative Search Architect & AI Systems Engineer`}>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
     
-    <header class="mb-12 border-b border-slate-100 dark:border-slate-800 pb-8" transition:animate="fade">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 items-center">
-        <!-- Profile Photo Asset -->
-        <div class="md:col-span-1 flex justify-start">
-          <img 
-            src="/images/phill.jpg" 
-            alt="Phill Savage — Generative Search Architect" 
-            class="w-32 h-32 md:w-full md:h-auto rounded-full md:rounded-xl object-cover grayscale hover:grayscale-0 transition-all duration-300 border-2 border-slate-200 dark:border-slate-700 shadow-sm"
-          />
-        </div>
-        <!-- Primary Value Proposition Header -->
-        <div class="md:col-span-3">
-          <h1 class="text-4xl md:text-5xl mb-4 font-bold tracking-tight text-slate-900 dark:text-white">I make sure AI models recommend your business.</h1>
-          <p class="text-xl text-muted-foreground">Ten years managing website projects. Now structuring data for the Answer Era.</p>
+    <!-- Header Section -->
+    <header class="mb-12 pt-10" transition:animate="fade">
+      <div class="flex flex-col md:flex-row gap-8 items-center md:items-start">
+        <img 
+          src="/images/phill.jpg" 
+          alt="Phill Savage — Generative Search Architect" 
+          class="w-40 h-40 rounded-full object-cover grayscale hover:grayscale-0 transition-all duration-500 border-4 border-white dark:border-slate-800 shadow-xl flex-shrink-0"
+        />
+        <div class="text-center md:text-left">
+          <h1 class="text-4xl md:text-5xl mb-4 font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight">
+            I make sure AI models <span class="text-blue-600 dark:text-blue-400">recommend your business.</span>
+          </h1>
+          <p class="text-xl text-slate-600 dark:text-slate-300 max-w-2xl">
+            Ten years managing digital infrastructure. Now structuring data and automating workflows for the Answer Era.
+          </p>
         </div>
       </div>
     </header>
 
-    <div class="prose prose-lg dark:prose-invert max-w-none leading-relaxed" transition:animate="fade">
+    <!-- Trust Metrics Bar -->
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-6 py-8 mb-12 border-y border-slate-200 dark:border-slate-800" transition:animate="fade">
+      <div class="text-center md:text-left">
+        <span class="block text-3xl font-bold text-slate-900 dark:text-white">10+</span>
+        <span class="text-sm text-slate-500 uppercase tracking-wider font-semibold">Years Experience</span>
+      </div>
+      <div class="text-center md:text-left">
+        <span class="block text-3xl font-bold text-slate-900 dark:text-white">100+</span>
+        <span class="text-sm text-slate-500 uppercase tracking-wider font-semibold">Brands Managed</span>
+      </div>
+      <div class="col-span-2 md:col-span-1 text-center md:text-left">
+        <span class="block text-3xl font-bold text-slate-900 dark:text-white">Ace MS</span>
+        <span class="text-sm text-slate-500 uppercase tracking-wider font-semibold">Agency Leadership</span>
+      </div>
+    </div>
+
+    <!-- Narrative Section -->
+    <div class="prose prose-lg dark:prose-invert max-w-3xl mb-16" transition:animate="fade">
       <p>
         I’ve spent the last decade leading technical website projects from the ground up. Most of that time has been spent running operations as a core part of the team at <strong>Ace Marketing Solutions (Ace MS Thailand)</strong>. 
       </p>
       
       <p>
-        Over the last 9+ years, I’ve directly managed the strategy, development, and deployment of web infrastructure for <strong>over 100 brands</strong>—ranging from high-end luxury boutique resorts in southern Thailand to fast-growing B2B scale-ups. 
+        During that time, I’ve directly managed the strategy, development, and deployment of web infrastructure for <strong>over 100 brands</strong>, ranging from fast-growing B2B scale-ups to international enterprises. 
       </p>
 
-      <h3 class="text-2xl font-bold mt-8 mb-4 text-blue-600">From SEO to Generative Search Architecture</h3>
+      <h2 class="text-2xl font-bold mt-10 mb-4 text-slate-900 dark:text-white">The Shift to Generative Search</h2>
       <p>
         Traditional SEO is shifting underneath us. Users are swapping Google's list of blue links for conversational summaries on ChatGPT, Gemini, and Perplexity. If your data isn't structured correctly, your brand simply doesn't exist to these models.
       </p>
       
       <p>
-        That’s why I don’t call myself a marketing consultant anymore. I focus strictly on <strong>Generative Search Architecture</strong>. I build and optimize the technical bridges—schemas, knowledge graphs, and authoritative entity networks—that AI engines crawl, trust, and cite.
+        That’s why I don’t call myself a traditional marketing consultant anymore. I focus strictly on <strong>Generative Search Architecture and AI Systems</strong>. I build and optimize the technical bridges—schemas, knowledge graphs, and internal automations—that AI engines crawl, trust, and cite.
       </p>
-
-      <h3 class="text-2xl font-bold mt-8 mb-4">What I Actually Do (The Strategy)</h3>
-      <p>
-        My day-to-day focuses on execution-level <strong>GEO (Generative Engine Optimization)</strong> and <strong>GSO (Generative Search Optimization)</strong>. This isn't about keyword stuffing; it’s about establishing clean, unshakeable entity authority across the web so AI models don't hallucinate your data or ignore your brand.
-      </p>
-      
-      <p>
-        In practice, that means solving concrete business problems:
-      </p>
-      
-      <ul>
-        <li>Plugging <strong>OTA commission leaks</strong> for hospitality clients by ensuring AI assistants route bookings directly to the hotel’s native booking engine instead of Agoda or Booking.com.</li>
-        <li>Structuring company data so B2B platforms are cited as the primary, authoritative option when buyers ask an AI for software or service recommendations.</li>
-        <li>Auditing and repairing fragmented digital footprints that cause LLMs (Large Language Models) to display outdated pricing, incorrect locations, or competing services.</li>
-      </ul>
-
-      <hr class="my-10 border-slate-200 dark:border-slate-800" />
-
-      <p class="text-sm text-muted-foreground">
-        When I’m not auditing knowledge bases or cleaning up metadata schemas, I’m usually building lightweight web projects with Astro or writing about the operational realities of digital strategy in my <a href="/journal">journal</a>.
-      </p>
-      
-      <div class="mt-10 text-center">
-        <a 
-          href="mailto:hello@psavage.net?subject=Consulting%20Inquiry%20—%20Generative%20Search" 
-          class="inline-block bg-blue-600 text-white px-8 py-4 rounded-md font-bold no-underline hover:bg-blue-700 hover:scale-105 transition-all duration-300 shadow-lg shadow-blue-600/20"
-        >
-          Let's talk strategy
-        </a>
-      </div>
     </div>
+
+    <!-- Services / Value Prop Section -->
+    <section class="mb-16" transition:animate="fade">
+      <h2 class="text-2xl font-bold mb-6 text-slate-900 dark:text-white">What I Actually Do (The Strategy)</h2>
+      <p class="text-lg text-slate-600 dark:text-slate-300 mb-8 max-w-3xl">
+        My day-to-day focuses on execution-level GEO and automated operations. This isn't about keyword stuffing; it’s about establishing clean, unshakeable technical authority so AI models don't hallucinate your data, while automating the repetitive tasks that slow your team down.
+      </p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Card 1 -->
+        <div class="bg-slate-50 dark:bg-slate-800/50 p-6 rounded-xl border border-slate-100 dark:border-slate-800">
+          <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2">Digital Footprint Audits</h3>
+          <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+            Diagnosing fragmented data that causes LLMs to display outdated pricing, incorrect locations, or recommend competing services instead of your brand.
+          </p>
+        </div>
+        
+        <!-- Card 2 -->
+        <div class="bg-slate-50 dark:bg-slate-800/50 p-6 rounded-xl border border-slate-100 dark:border-slate-800">
+          <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2">Knowledge Graph Engineering</h3>
+          <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+            Structuring company data and entity networks so SaaS and B2B platforms are cited as the primary, authoritative option when buyers ask an AI for recommendations.
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-slate-50 dark:bg-slate-800/50 p-6 rounded-xl border border-slate-100 dark:border-slate-800 md:col-span-2">
+          <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2">AI Workflow Automations</h3>
+          <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+            Connecting your web infrastructure to intelligent agents using Make or n8n to automate lead qualification, proposal drafting, and backend digital operations.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer / CTA -->
+    <div class="bg-blue-50 dark:bg-blue-900/20 rounded-2xl p-8 text-center" transition:animate="fade">
+      <p class="text-slate-600 dark:text-slate-300 mb-6 max-w-2xl mx-auto">
+        When I’m not auditing knowledge bases or building AI workflows, I’m usually developing lightning-fast web projects with Astro or writing about digital strategy in my <a href="/journal" class="text-blue-600 dark:text-blue-400 underline hover:no-underline">journal</a>.
+      </p>
+      
+      <a 
+        href="mailto:hello@psavage.net?subject=Consulting%20Inquiry%20—%20Generative%20Search" 
+        class="inline-flex items-center justify-center px-8 py-3 text-base font-bold text-white transition-all duration-300 bg-blue-600 rounded-lg shadow-md hover:bg-blue-700 hover:-translate-y-1 hover:shadow-xl"
+      >
+        Let's talk strategy
+      </a>
+    </div>
+
   </div>
 </BaseLayout>

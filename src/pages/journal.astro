@@ -12,22 +12,43 @@ const sortedPosts = allPosts.sort((a, b) => {
 // Format posts for the PostList component
 const posts = sortedPosts.map(post => ({
   ...post,
-  url: `/posts/${post.id}`,
+  url: `/posts/${post.id}`, // Or post.slug depending on your Astro version
   frontmatter: post.data
 }));
 ---
 
-<BaseLayout title="Journal">
-  <div class="max-w-3xl mx-auto">
-    <header class="mb-12 text-center" transition:animate="fade">
-      <h1 class="text-5xl mb-4">Journal</h1>
-      <p class="text-xl text-muted-foreground">
-        Thoughts on AI Search, Agentic workflows and a future where brands are cited by AI instead of buried in Google.
+<BaseLayout title="Journal | Generative Search Intelligence">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+    
+    <!-- Publication Header -->
+    <header class="pt-10 mb-12 border-b border-slate-200 dark:border-slate-800 pb-12" transition:animate="fade">
+      
+      <!-- Kicker/Badge -->
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-sm font-bold tracking-widest uppercase mb-6">
+        Field Notes
+      </div>
+      
+      <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-6">
+        Search Intelligence <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 dark:from-blue-400 dark:to-cyan-300">Journal</span>
+      </h1>
+      
+      <p class="text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed">
+        Thoughts on AI Search, Agentic workflows, and a future where brands are recommended by AI instead of buried in ten blue links.
       </p>
+      
+      <!-- Optional: Post Counter -->
+      <div class="mt-8 text-sm font-medium text-slate-400 dark:text-slate-500">
+        {posts.length} published articles
+      </div>
     </header>
 
+    <!-- Post Feed -->
     <div transition:animate="fade">
-      <PostListWithThumbnails posts={posts} showTags={true} title="All Posts" />
+      <PostListWithThumbnails 
+        posts={posts} 
+        showTags={true} 
+      />
     </div>
+    
   </div>
 </BaseLayout>

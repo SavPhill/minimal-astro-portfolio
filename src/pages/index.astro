@@ -10,35 +10,98 @@ const sortedPosts = allPosts.sort((a, b) => {
 
 const posts = sortedPosts.slice(0, 5).map(post => ({
   ...post,
-  url: `/posts/${post.id}`,
+  url: `/posts/${post.id}`, 
   frontmatter: post.data
 }));
 ---
 
-<BaseLayout title="Phill | Generative Search Architect (GEO)">
-  <div class="max-w-4xl mx-auto">
-    <section class="text-center py-[10vh]" transition:animate="fade">
-      <h1 class="text-5xl md:text-7xl mb-8 font-bold tracking-tight">
-        Traditional SEO is Changing. 
- <span class="text-blue-600">Position Your Business to Be Recommended by AI.</span>
+<BaseLayout title="Phill | Generative Search Architect & AI Systems">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Hero Section -->
+    <section class="text-center py-24 md:py-32" transition:animate="fade">
+      <span class="text-sm font-bold tracking-widest uppercase text-blue-600 dark:text-blue-400 mb-6 block">
+        Traditional SEO is Changing
+      </span>
+      
+      <h1 class="text-5xl md:text-6xl lg:text-7xl mb-8 font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight md:leading-tight">
+        Position Your Business to Be <br class="hidden md:block" />
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 dark:from-blue-400 dark:to-cyan-300">
+          Recommended by AI.
+        </span>
       </h1>
-      <p class="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-14 leading-relaxed">
-        I’m Phill, a Generative Search Architect. I help brands secure their place in the "Answer Era" by optimizing for AI discovery. If ChatGPT isn't recommending you, your competitors are already winning.
+      
+      <p class="text-xl md:text-2xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed">
+        I’m Phill, a Generative Search Architect. I build the technical bridges between your business data and Large Language Models so you dominate the "Answer Era."
       </p>
       
-      <a href="mailto:hello@psavage.net?subject=AI%20Visibility%20Audit%20Request" class="btn-primary btn-lg tracking-wide no-underline hover:no-underline transform transition-all duration-300 hover:scale-105 hover:shadow-[0_3.5rem_5rem_rgba(21,21,21,0.3)] shadow-[0_3rem_4rem_rgba(21,21,21,0.25)] dark:bg-white dark:text-black dark:hover:bg-gray-100">
-  Get Your AI Visibility Audit
-</a>
-      
-      <p class="mt-8 text-sm text-muted-foreground italic">
-        10+ Years of Website Digital Strategy
-      </p>
+      <div class="flex flex-col items-center justify-center space-y-4">
+        <a 
+          href="mailto:hello@psavage.net?subject=AI%20Visibility%20Audit%20Request" 
+          class="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white transition-all duration-300 bg-blue-600 rounded-full shadow-lg hover:bg-blue-700 hover:scale-105 hover:shadow-xl dark:bg-white dark:text-slate-900 dark:hover:bg-gray-100"
+        >
+          Get Your AI Visibility Audit
+        </a>
+        <p class="text-sm font-medium text-slate-500 dark:text-slate-400">
+          ✓ 10+ Years Digital Infrastructure & Security
+        </p>
+      </div>
     </section>
 
-    <section class="mx-auto mt-10" transition:animate="fade">
-      <h2 class="text-xs uppercase tracking-[0.2em] font-semibold text-muted-foreground mb-12 text-center">
-        Latest Search Intelligence
-      </h2>
+    <!-- NEW: Services / Architecture Section -->
+    <section class="py-16 mb-8 border-y border-slate-200 dark:border-slate-800" transition:animate="fade">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-4">Architecture for the Answer Era</h2>
+        <p class="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+          Moving beyond blue links. I execute the highly-technical data structuring and workflow automations that keep your brand visible and efficient.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <!-- Service 1 -->
+        <div class="bg-slate-50 dark:bg-slate-800/40 p-8 rounded-2xl border border-slate-100 dark:border-slate-700/50 hover:border-blue-500/30 transition-colors">
+          <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">AI Visibility Audits (GEO)</h3>
+          <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+            Diagnostic teardowns of how LLMs perceive your brand. I identify hallucinations, missing entity connections, and data leaks costing you AI recommendations.
+          </p>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="bg-slate-50 dark:bg-slate-800/40 p-8 rounded-2xl border border-slate-100 dark:border-slate-700/50 hover:border-blue-500/30 transition-colors">
+          <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Knowledge Graph Engineering</h3>
+          <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+            Implementing advanced JSON-LD schema and entity networks to give AI models a mathematically clear, unshakeable understanding of what you sell.
+          </p>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="bg-slate-50 dark:bg-slate-800/40 p-8 rounded-2xl border border-slate-100 dark:border-slate-700/50 hover:border-blue-500/30 transition-colors">
+          <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">AI Workflow Automations</h3>
+          <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+            Connecting your web infrastructure to AI agents. Automate lead qualification, proposal drafting, and internal operations using tools like Make and n8n.
+          </p>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="bg-slate-50 dark:bg-slate-800/40 p-8 rounded-2xl border border-slate-100 dark:border-slate-700/50 hover:border-blue-500/30 transition-colors">
+          <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">AI-Ready Web Builds</h3>
+          <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+            Leaving bloated, vulnerable platforms behind. I build lightning-fast, highly secure digital platforms using modern stacks like Astro that AI easily digests.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Posts Section -->
+    <section class="mx-auto py-16" transition:animate="fade">
+      <div class="flex items-center justify-between mb-12">
+        <h2 class="text-sm uppercase tracking-widest font-semibold text-slate-500 dark:text-slate-400">
+          Latest Search Intelligence
+        </h2>
+        <a href="/journal" class="text-sm font-medium text-blue-600 dark:text-blue-400 hover:underline">
+          View all →
+        </a>
+      </div>
       
       <PostList 
         posts={posts} 
@@ -47,12 +110,7 @@ const posts = sortedPosts.slice(0, 5).map(post => ({
         showSeparators={true} 
         showTags={true}
       />
-
-      <div class="text-center mt-20">
-        <a href="/journal" class="text-lg font-medium text-black dark:text-white py-2 px-4 rounded-md inline-block focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 hover:underline">
-          All Posts <span aria-hidden="true">→</span>
-        </a>
-      </div>
     </section>
+
   </div>
 </BaseLayout>
