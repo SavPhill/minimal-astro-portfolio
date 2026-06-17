@@ -1,6 +1,6 @@
 ---
 title: "How Different Language Models Ingest Your Brand Data"
-date: 2026-07-09
+date: 2026-06-14
 excerpt: "Not all AI engines crawl the web the same way. Here is how to balance your strategy across different major models."
 metaTitle: "AI Search Optimization and LLM Entity Matching"
 metaDescription: "Discover how different AI models parse brand information. Learn the mechanics of AI Search Optimization across diverse engines."

@@ -1,6 +1,6 @@
 ---
 title: "Stop Wasting Traffic With Broken Digital Operations"
-date: 2026-06-25
+date: 2026-06-15
 excerpt: "Getting an AI to recommend your business is only step one. You need automated workflows to process the traffic."
 metaTitle: "AI Workflow Automation for Business Lead Routing"
 metaDescription: "Learn how AI Workflow Automation connects your website to intelligent agents to process leads and eliminate manual data entry."

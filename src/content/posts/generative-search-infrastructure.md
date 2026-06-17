@@ -1,6 +1,6 @@
 ---
 title: "Building Clean Web Architecture for Generative Search"
-date: 2026-07-02
+date: 2026-06-17
 excerpt: "Legacy platforms are bloated. Generative engines prefer fast and clean architecture. Here is how we build for the answer era."
 metaTitle: "Generative Search Infrastructure and AI Ready Web Architecture"
 metaDescription: "Discover why AI Ready Web Architecture requires clean code and JSON LD schema. Learn how we build Generative Search Infrastructure."
