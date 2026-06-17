@@ -1,6 +1,6 @@
 ---
 title: "Where to Start With Generative Engine Optimization"
-date: 2026/07/23
+date: 2026-07-23
 excerpt: "Founders always ask how to get started with AI visibility. The answer is incredibly boring and highly effective."
 metaTitle: "Where to Start With Generative Engine Optimization"
 metaDescription: "Learn where to start with Generative Engine Optimization. A beginner guide to structuring data for AI search visibility."
