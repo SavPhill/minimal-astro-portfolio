@@ -1,6 +1,6 @@
 ---
 title: "Winning the Citation Battle on Real Time Engines"
-date: 2026-07-16
+date: 2026-06-16
 excerpt: "Real time retrieval engines are the future of commercial search. Here is how to secure your native brand link."
 metaTitle: "Generative Engine Citations and Real Time Search Retrieval"
 metaDescription: "Learn how to secure native links in real time search queries. Optimize your brand citation metrics for live generative engines."
