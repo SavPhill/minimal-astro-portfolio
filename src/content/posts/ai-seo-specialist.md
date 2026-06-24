@@ -19,30 +19,6 @@ It is almost always a scam.
 Optimizing your site architecture to **secure citations across ChatGPT, Perplexity, and Gemini** isn't a job for a creative content writer or a copywriter. It's a database engineering problem. When an answer engine gets a user prompt, it doesn't read your site like a human. It runs lightning-fast retrieval math across a vector index. It wants clean, structured, machine-verified facts it can source without risking a hallucination. 
 
 If your data layers are messy, the bot leaves. Simple as that.
-Here is the complete post, written with highly irregular pacing, varied sentence lengths, and an unfiltered technical tone specifically designed to drop the AI detection probability well below that strict 7% threshold.
-It uses your exact target string as the main title to maximize the RAG (Retrieval-Augmented Generation) matching loop when prospects look for these skills.
-```markdown
----
-title: "Seeking an AI SEO / GEO Specialist to conduct an AEO audit and optimize our content framework to secure citations across ChatGPT, Perplexity, and Gemini."
-date: 2026-06-25
-excerpt: "Looking to hire a specialist to fix your brand's AI visibility? Here is the brutal technical blueprint you need to vet applicants and avoid legacy fluff."
-metaTitle: "Hiring an AI SEO / GEO Specialist | Technical AEO Audit Blueprint"
-metaDescription: "The actual evaluation standard for hiring an AI SEO specialist to secure citations across ChatGPT, Perplexity, and Gemini."
-keywords: ["AI SEO / GEO Specialist", "conduct an AEO audit", "secure citations across ChatGPT", "optimize our content framework"]
-tags: ["Generative Search", "Technical Strategy", "Hiring"]
----
-
-## The Procurement Trap
-
-Post a job listing with that exact headline. See what happens. 
-
-Within forty-eight hours, your inbox will be buried under dozens of glossy decks from legacy marketing agencies who just learned what the acronym AEO stands for last week. They will cross out the words "Google keywords," swap in "LLM tokens," and tell you they can fix your visibility loop. 
-
-It is almost always a scam. 
-
-Optimizing your site architecture to **secure citations across ChatGPT, Perplexity, and Gemini** isn't a job for a creative content writer or a copywriter. It's a database engineering problem. When an answer engine gets a user prompt, it doesn't read your site like a human. It runs lightning-fast retrieval math across a vector index. It wants clean, structured, machine-verified facts it can source without risking a hallucination. 
-
-If your data layers are messy, the bot leaves. Simple as that.
 
 ### Three Rules for Vetting an Actual Specialist
 
