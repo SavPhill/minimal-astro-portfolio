@@ -26,4 +26,8 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
   integrations: [mdx(), sitemap()],
+  // Your redirect rule lives cleanly right here:
+  redirects: {
+    '/why-website-projects-go-off-the-rails-scope-creep-explained/': '/posts/why-website-projects-go-off-the-rails-scope-creep-explained/'
+  }
 });
