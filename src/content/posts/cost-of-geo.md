@@ -1,6 +1,6 @@
 ---
 title: "What Is the GEO Cost for Businesses in 2026?"
-date: 2026-06-25
+date: 2026-06-23
 excerpt: "The rate cards for Generative Engine Optimization are completely unstandardized right now. Let's look at what agencies are actually billing for LLM visibility."
 metaTitle: "GEO Cost Breakdown 2026 | AI Search Optimization Pricing"
 metaDescription: "An honest look at Generative Engine Optimization pricing models, monthly retainers, and the hidden traps of hiring a legacy SEO agency for AI search."
