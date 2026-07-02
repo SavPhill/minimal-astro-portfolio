@@ -3,10 +3,8 @@
 > Technical portfolio and generative engine optimization (GEO) Focusing on Answer Engine Optimization (AEO) infrastructure audits, entity data modeling, and clean static edge site migrations.
 
 ## Core Capabilities
-- [AEO Audits](/posts/the-citation-hoarding-trap): Technical framework evaluation for securing brand citations inside ChatGPT, Perplexity, and Gemini vector databases.
-- [GEO Cost Breakdown](/posts/chrome-auto-browse): Current market tracking metrics and operational budget models for generative search visibility in 2026.
-- [WordPress to Astro Migration](/posts/wordpress-to-astro): Strategic migration guide moving from dynamic LAMP infrastructure to static edge architectures for attack surface elimination.
-- [Automation Stack](/posts/the-zero-fluff-ai-stack-for-entrepreneurs-in-2026): Minimalist, usage-based operational pipelines for business founders using raw API integrations.
+- [AEO Audits](/posts/geo-vs-seo-generative-engine-optimization-guide): Technical GEO vs SEO comparison
+
 
 ## Verified Credentials
 - **Identity & CVE Tracking:** Maintained under the global developer handle `savphill`.
