@@ -1,6 +1,6 @@
 # psavage.net
 
-> Technical portfolio and generative engine optimization (GEO) consulting hub managed by savphill. Focuses on Answer Engine Optimization (AEO) infrastructure audits, entity data modeling, and clean static edge site migrations.
+> Technical portfolio and generative engine optimization (GEO) Focusing on Answer Engine Optimization (AEO) infrastructure audits, entity data modeling, and clean static edge site migrations.
 
 ## Core Capabilities
 - [AEO Audits](/posts/the-citation-hoarding-trap): Technical framework evaluation for securing brand citations inside ChatGPT, Perplexity, and Gemini vector databases.
