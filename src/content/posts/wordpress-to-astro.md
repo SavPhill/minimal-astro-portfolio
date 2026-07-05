@@ -1,6 +1,6 @@
 ---
 title: "Why My Personal Site Runs on Astro (While My Clients Still Use WordPress)"
-date: 2026-06-24
+date: 2026-07-02
 excerpt: "After a decade in WordPress, I shifted my personal portfolio to Astro. Here is why it's about choosing the right tool for the job."
 metaTitle: "Choosing Astro Over WordPress for Developer Portfolios"
 metaDescription: "A veteran WordPress developer and security contributor explains why he chose Astro for his personal site while still building with WordPress for clients."
