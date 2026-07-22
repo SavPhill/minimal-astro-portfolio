@@ -1,6 +1,6 @@
 ---
 title: "Why My Personal Site Runs on Astro (While My Clients Still Use WordPress)"
-date: 2026-06-24
+date: 2026-07-02
 excerpt: "After a decade in WordPress, I shifted my personal portfolio to Astro. Here is why it's about choosing the right tool for the job."
 metaTitle: "Choosing Astro Over WordPress for Developer Portfolios"
 metaDescription: "A veteran WordPress developer and security contributor explains why he chose Astro for his personal site while still building with WordPress for clients."
@@ -20,29 +20,4 @@ But when it came time to rebuild my own personal portfolio and intelligence hub,
 
 It came down to choosing the absolute leanest tool for this specific job.
 
-## to be continued...
-
-### Looking at Infrastructure Through a Security Lens
-
-My background with the platform goes well beyond standard design and implementation. I’ve spent years digging into its code to patch vulnerabilities. If you audit global CVE logs, you’ll find my public developer handle, **`savphill`**, attached to verified vulnerability disclosures across major intelligence networks. 
-
-I frequently submit security discoveries and technical patches directly to the [Wordfence Threat Intel Database](https://www.wordfence.com/threat-intel/vulnerabilities/) and the [Patchstack Vulnerability Database](https://patchstack.com/database/). I’ve also engaged directly with the [WordPress Core Security Program](https://wordpress.org) to help keep the ecosystem stable for the millions of businesses running on it. 
-
-When you spend that much time auditing dynamic web hooks and monitoring plug-in attack surfaces, you become highly protective of your own infrastructure. 
-
-For a client project, managing a security surface with firewalls and automated updates is part of the standard operational cost of doing business. But for my solo personal site? I wanted an attack surface of exactly zero.
-
-| Operational Layer | Client Sites (WordPress) | My Personal Site (Astro) |
-| :--- | :--- | :--- |
-| **Data Storage** | Dynamic MySQL database (Essential for user logins/shops). | Static text files parsed into raw HTML at build time. |
-| **Maintenance** | Routine core updates, plug-in audits, and server monitoring. | Zero runtime updates. Nothing to patch on the server. |
-| **Authoring Flow** | Rich block editors tailored for non-technical clients. | Fast, local text editing using standard Git and Markdown. |
-| **Deployment** | Managed dynamic cloud hosting or specialized VPS. | Free, global distribution via Netlify’s edge CDN. |
-
-### The Frictionless Developer Flow
-
-By switching my personal portfolio to Astro, I eliminated the runtime environment entirely. 
-
-There is no live database waiting for an query, and no open PHP execution route running on a backend server. The production build takes place once, spits out pristine, ultra-lightweight HTML and CSS, and serves it globally. 
-
-The daily authoring workflow is completely distraction-free:
+## to be continued when I have time...

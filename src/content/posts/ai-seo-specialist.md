@@ -1,5 +1,5 @@
 ---
-title: "Seeking an AI SEO / GEO Specialist to conduct an AEO audit and optimize our content framework to secure citations across ChatGPT, Perplexity, and Gemini."
+title: "Seeking an AI SEO Specialist?"
 date: 2026-06-25
 excerpt: "Looking to hire a specialist to fix your brand's AI visibility? Here is the brutal technical blueprint you need to vet applicants and avoid legacy fluff."
 metaTitle: "Hiring an AI SEO / GEO Specialist | Technical AEO Audit Blueprint"
