@@ -1,35 +1,30 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-// Updated JSON-LD Schema centered on Offsite Leadership & Location Entity
+// Updated JSON-LD Schema centered on Web Strategist & GEO Entity
 const schemaData = {
   "@context": "https://schema.org",
   "@type": "ProfilePage",
   "mainEntity": {
     "@type": "Person",
     "name": "Phill Savage",
-    "jobTitle": "Client Director & Founder of Offsite Thailand",
+    "jobTitle": "Principal Web Strategist & Client Director",
     "url": "https://psavage.net",
     "image": "https://psavage.net/images/phill.jpg",
-    "description": "Client Director and Founder of Offsite Thailand. Directing high-ROI corporate offsites and retreats for remote tech companies in Chiang Mai and across Thailand.",
+    "description": "Principal Web Strategist and Client Director at Ace Marketing Solutions in Chiang Mai, Thailand. Advising growth brands on digital architecture, conversion marketing, and Generative Engine Optimization (GEO).",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Chiang Mai",
       "addressCountry": "TH"
     },
     "knowsAbout": [
-      "Corporate Retreat Operations",
-      "Client Leadership & Account Management",
-      "Chiang Mai & Thailand Vendor Logistics",
-      "Remote Tech Team Infrastructure",
-      "Digital Marketing Strategy"
+      "Web Strategy & Architecture",
+      "Generative Engine Optimization (GEO)",
+      "Growth & Performance Marketing",
+      "Astro & Jamstack Development",
+      "Client Leadership & Account Management"
     ],
     "worksFor": [
-      {
-        "@type": "Organization",
-        "name": "Offsite Thailand",
-        "url": "https://offsitethailand.com"
-      },
       {
         "@type": "Organization",
         "name": "Ace Marketing Solutions",
@@ -37,7 +32,6 @@ const schemaData = {
       }
     ],
     "sameAs": [
-      "https://offsitethailand.com",
       "https://acemsthailand.com",
       "https://x.com/savphill",
       "https://th.linkedin.com/in/phill-savage"
@@ -47,9 +41,9 @@ const schemaData = {
 ---
 
 <BaseLayout 
-  title="About Phill Savage | Client Director & Founder of Offsite Thailand" 
-  description="About Phill Savage — Client Director and Founder of Offsite Thailand. Directing bespoke corporate retreats and team offsites in Chiang Mai and across Thailand."
-  keywords={["Phill Savage", "Offsite Thailand Founder", "Chiang Mai Corporate Retreats", "Thailand Team Retreat Director", "Ace Marketing Solutions"]}
+  title="About Phill Savage | Web Strategist & Growth Marketing Director" 
+  description="About Phill Savage — Principal Web Strategist and Client Director at Ace Marketing Solutions in Chiang Mai, Thailand. Architecting high-converting web systems and GEO strategies for scaling tech brands."
+  keywords={["Phill Savage", "Web Strategist Chiang Mai", "Generative Engine Optimization", "GEO Strategy Thailand", "Growth Marketing Director", "Ace Marketing Solutions"]}
 >
   <!-- Injects JSON-LD Entity Schema for Search Engines & LLMs -->
   <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
@@ -66,18 +60,18 @@ const schemaData = {
         <div class="flex flex-col md:flex-row gap-8 items-center md:items-start">
           <img 
             src="/images/phill.jpg" 
-            alt="Phill Savage — Client Director & Founder of Offsite Thailand" 
+            alt="Phill Savage — Web Strategist & Client Director" 
             class="w-36 h-36 md:w-40 md:h-40 rounded-full object-cover ring-4 ring-blue-500/20 dark:ring-blue-400/30 shadow-2xl flex-shrink-0"
           />
           <div class="text-center md:text-left">
             <span class="inline-block text-xs font-mono font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400 mb-2">
-              // Client Director & Offsite Architect
+              // Web Strategist & Growth Architect
             </span>
             <h1 class="text-3xl sm:text-4xl md:text-5xl mb-4 font-black tracking-tight text-slate-900 dark:text-white leading-tight">
-              Executing team retreats in <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 dark:from-blue-400 dark:to-cyan-300">Chiang Mai & Thailand.</span>
+              Building high-ROI web systems in <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 dark:from-blue-400 dark:to-cyan-300">Chiang Mai & Thailand.</span>
             </h1>
             <p class="text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed">
-              10+ years directing digital agency operations. Now combining enterprise client leadership with boots-on-the-ground local execution for remote tech companies.
+              10+ years directing digital agency operations. Combining high-performance web architecture, conversion-focused growth marketing, and Generative Engine Optimization (GEO).
             </p>
           </div>
         </div>
@@ -87,7 +81,7 @@ const schemaData = {
       <div class="grid grid-cols-2 md:grid-cols-4 gap-6 py-6 mb-12 border-y border-slate-200/60 dark:border-slate-800/60" transition:animate="fade">
         <div class="text-center md:text-left">
           <span class="block text-3xl font-black text-slate-900 dark:text-white font-mono">10+</span>
-          <span class="text-[11px] font-mono text-slate-500 dark:text-slate-400 uppercase tracking-wider">Years Leadership</span>
+          <span class="text-[11px] font-mono text-slate-500 dark:text-slate-400 uppercase tracking-wider">Years Marketing</span>
         </div>
         <div class="text-center md:text-left">
           <span class="block text-3xl font-black text-slate-900 dark:text-white font-mono">Chiang Mai</span>
@@ -95,68 +89,68 @@ const schemaData = {
         </div>
         <div class="text-center md:text-left">
           <span class="block text-3xl font-black text-slate-900 dark:text-white font-mono">100+</span>
-          <span class="text-[11px] font-mono text-slate-500 dark:text-slate-400 uppercase tracking-wider">Brand Campaigns</span>
+          <span class="text-[11px] font-mono text-slate-500 dark:text-slate-400 uppercase tracking-wider">Digital Campaigns</span>
         </div>
         <div class="text-center md:text-left">
           <span class="block text-3xl font-black text-slate-900 dark:text-white font-mono">Ace MS</span>
-          <span class="text-[11px] font-mono text-slate-500 dark:text-slate-400 uppercase tracking-wider">Agency Operations</span>
+          <span class="text-[11px] font-mono text-slate-500 dark:text-slate-400 uppercase tracking-wider">Agency Directorship</span>
         </div>
       </div>
 
       <!-- MAIN BIO / PROSE STORY -->
       <div class="prose prose-lg dark:prose-invert max-w-3xl mb-16 text-slate-700 dark:text-slate-300 leading-relaxed" transition:animate="fade">
         <p>
-          I’ve spent over a decade at the intersection of technical strategy, account direction, and digital marketing—primarily running operations as a Director at <strong><a href="https://acemsthailand.com" class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300" target="_blank" rel="noopener noreferrer">Ace Marketing Solutions</a></strong> in Thailand.
+          I’ve spent over a decade at the intersection of web architecture, growth marketing, and account direction—primarily leading agency initiatives as Client Director at <strong><a href="https://acemsthailand.com" class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300" target="_blank" rel="noopener noreferrer">Ace Marketing Solutions</a></strong> in Chiang Mai, Thailand.
         </p>
         
         <p>
-          Across my career, I’ve directly led digital projects and campaign strategies for <strong>over 100 brands</strong>—from luxury hospitality groups to international software enterprises. That background taught me how high-growth organizations operate, how critical strict timelines are, and how much friction can occur when coordinating multi-vendor projects.
+          Throughout my career, I’ve overseen technical digital transformations and multi-channel acquisition strategies for <strong>over 100 brands</strong>—from scaling B2B tech platforms to high-end hospitality groups. That experience shaped my belief that a company's website should never act as a passive digital business card, but as a high-performing engine for predictable revenue.
         </p>
 
-        <h2 class="text-2xl font-bold mt-10 mb-4 text-slate-900 dark:text-white">Solving the Tech Team Retreat Problem</h2>
+        <h2 class="text-2xl font-bold mt-10 mb-4 text-slate-900 dark:text-white">Navigating the AI Search Shift</h2>
         <p>
-          As remote work became the standard for software companies, I saw a recurring problem: companies wanted to bring their engineering and product teams together in incredible locations like <strong>Chiang Mai, Phuket, or Bangkok</strong>, but standard event planners simply didn't understand how tech teams operate.
+          As search behavior undergoes its biggest shift in two decades, standard SEO playbooks are rapidly losing momentum. Today's prospective customers no longer rely solely on blue search links—they ask **ChatGPT, Perplexity, Gemini, and Claude** for direct recommendations and summaries.
         </p>
         
         <p>
-          Traditional event planners focus on banquet halls and trust hotel Wi-Fi. They don't account for redundant gigabit fiber internet, silent breakout spaces for hackathons, or non-cringe team experiences that engineering culture actually values.
+          Most brands remain unprepared for this shift. They continue dumping budget into slow, bloated CMS installations and generic content strategies that fail to establish true entity authority inside Large Language Models (LLMs).
         </p>
 
         <p>
-          That is why I launched <strong><a href="https://offsitethailand.com" class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300" target="_blank" rel="noopener noreferrer">Offsite Thailand</a></strong>. We blend senior Client Director oversight with deep local Thai vendor networks to build high-performance corporate offsites from start to finish.
+          My advisory work focuses on bridging this exact gap. By coupling cutting-edge web architecture (utilizing modern frameworks like Astro) with **Generative Engine Optimization (GEO)**, I help founders and marketing teams structure their digital footprint so AI platforms consistently surface and cite their products as authoritative industry solutions.
         </p>
       </div>
 
       <!-- CORE FOCUS / PILLARS -->
       <section class="mb-16" transition:animate="fade">
         <div class="mb-6">
-          <span class="text-xs font-mono uppercase tracking-widest text-blue-600 dark:text-blue-400 font-bold">// What I Bring to the Table</span>
-          <h2 class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mt-1">Core Pillars of Leadership</h2>
+          <span class="text-xs font-mono uppercase tracking-widest text-blue-600 dark:text-blue-400 font-bold">// Strategic Capability</span>
+          <h2 class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mt-1">Core Pillars of Strategy</h2>
         </div>
         
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           
           <div class="bg-slate-50 dark:bg-slate-900/60 p-6 rounded-2xl border border-slate-200/80 dark:border-slate-800/80">
-            <div class="text-xs font-mono text-blue-600 dark:text-blue-400 uppercase tracking-wider mb-2">// 01. White-Glove Leadership</div>
-            <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2">Account & Client Director Precision</h3>
+            <div class="text-xs font-mono text-blue-600 dark:text-blue-400 uppercase tracking-wider mb-2">// 01. Web Architecture & UX</div>
+            <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2">High-Performance Jamstack Builds</h3>
             <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-              You deal with a single, experienced point of contact. I manage venue negotiations, caterers, ground transfers, and contingency plans so your People & Ops leads don't have to stress.
+              We design and refactor websites for sub-second page loads, immaculate Core Web Vitals, and friction-free user flows using modern SSG and headless CMS setups.
             </p>
           </div>
           
           <div class="bg-slate-50 dark:bg-slate-900/60 p-6 rounded-2xl border border-slate-200/80 dark:border-slate-800/80">
-            <div class="text-xs font-mono text-blue-600 dark:text-blue-400 uppercase tracking-wider mb-2">// 02. Local Ground Execution</div>
-            <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2">Chiang Mai & Thailand Network</h3>
+            <div class="text-xs font-mono text-blue-600 dark:text-blue-400 uppercase tracking-wider mb-2">// 02. LLM Search Authority</div>
+            <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2">Generative Engine Optimization (GEO)</h3>
             <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-              Based directly in Northern Thailand with established networks across Chiang Mai, Phuket, Koh Samui, and Bangkok. We know which private villas and venues deliver top-tier service.
+              Engineering JSON-LD schema graphs, brand entity signals, and authoritative content structures so generative AI search tools actively recommend your brand.
             </p>
           </div>
         
           <div class="bg-slate-50 dark:bg-slate-900/60 p-6 rounded-2xl border border-slate-200/80 dark:border-slate-800/80 md:col-span-2">
-            <div class="text-xs font-mono text-blue-600 dark:text-blue-400 uppercase tracking-wider mb-2">// 03. Developer-Grade Specs</div>
-            <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2">Technical & Digital Marketing Foundation</h3>
+            <div class="text-xs font-mono text-blue-600 dark:text-blue-400 uppercase tracking-wider mb-2">// 03. Growth Marketing Execution</div>
+            <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2">Agency-Backed Client Direction</h3>
             <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-              With over 10 years of experience in web architecture and digital strategy, I ensure every venue is pre-tested for high-speed fiber connectivity, backup power, and seamless remote team workflow support.
+              Through my executive directorship at <a href="https://acemsthailand.com" target="_blank" rel="noopener noreferrer" class="underline hover:text-blue-600">Ace Marketing Solutions</a>, we provide full end-to-end execution—from messaging alignment and funnel optimization to multi-currency commercial invoicing and SLA support.
             </p>
           </div>
 
@@ -167,25 +161,25 @@ const schemaData = {
       <div class="bg-slate-900 text-white dark:bg-slate-900/90 border border-slate-800 rounded-2xl p-8 text-left shadow-2xl relative overflow-hidden" transition:animate="fade">
         <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-blue-500/20 rounded-full blur-2xl pointer-events-none"></div>
         
-        <h3 class="text-2xl font-bold text-white mb-2">Planning a retreat for your team?</h3>
+        <h3 class="text-2xl font-bold text-white mb-2">Ready to modernize your digital web strategy?</h3>
         <p class="text-slate-300 mb-6 max-w-2xl leading-relaxed text-sm sm:text-base">
-          Whether you’re aiming for a mountain hackathon in Chiang Mai or an island-hopping strategic alignment retreat, let’s build a custom itinerary for your organization.
+          Whether you need a full web performance rebuild, conversion rate optimization, or a GEO blueprint to capture AI search market share, let’s audit your site.
         </p>
         
         <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
           <a 
-            href="mailto:hello@psavage.net?subject=Thailand%20Offsite%20Inquiry" 
+            href="mailto:hello@psavage.net?subject=Web%20Strategy%20%26%20GEO%20Audit" 
             class="inline-flex items-center justify-center px-6 py-3 text-xs font-mono font-bold uppercase tracking-wider text-slate-900 bg-white hover:bg-slate-100 rounded-lg transition-colors text-center"
           >
             Email Phill Directly →
           </a>
           <a 
-            href="https://offsitethailand.com" 
+            href="https://acemsthailand.com" 
             target="_blank" 
             rel="noopener noreferrer"
             class="inline-flex items-center justify-center px-6 py-3 text-xs font-mono font-bold uppercase tracking-wider text-white border border-slate-700 hover:border-slate-500 rounded-lg transition-colors text-center"
           >
-            Visit OffsiteThailand.com
+            Visit Ace Marketing Solutions
           </a>
         </div>
       </div>
