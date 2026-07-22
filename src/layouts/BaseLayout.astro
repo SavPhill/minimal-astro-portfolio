@@ -14,6 +14,7 @@ interface Props {
   publishedDate?: Date;
   modifiedDate?: Date;
   author?: string;
+  schema?: Record<string, any>;
 }
 
 const { 
@@ -21,49 +22,46 @@ const {
   pageTitle,
   description = SITE.description,
   keywords,
-  image = "/favicon.svg",
+  image = "/images/og-default.png",
   type = "website",
   publishedDate,
   modifiedDate,
-  author = SITE.author
+  author = SITE.author,
+  schema
 } = Astro.props;
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-const ogImageURL = image.startsWith('/') ? new URL(image, Astro.site) : image;
+// STRICT MODE FIX: Fallback to the current request URL if Astro.site is undefined
+const siteBase = Astro.site ?? Astro.url;
+// STRICT MODE FIX: Explicitly convert URL objects to strings for HTML attributes
+const canonicalURL = new URL(Astro.url.pathname, siteBase).toString();
+const ogImageURL = image.startsWith('/') ? new URL(image, siteBase).toString() : image;
+const siteUrlString = Astro.site?.toString() ?? Astro.url.origin;
 const siteName = SITE.name;
 
-// Strukturierte Daten (JSON-LD) für bessere SEO
+// Complete Cross-Platform Entity Graph
+const socialLinks = [
+  "https://x.com/savphill",
+  "https://github.com/savphill",
+  "https://th.linkedin.com/in/phill-savage",
+  "https://profiles.wordpress.org/phillsav/",
+  "https://offsitethailand.com"
+];
+
 const jsonLDWebsite = {
   "@context": "https://schema.org",
   "@type": "WebSite",
   "name": siteName,
-  "url": Astro.site?.toString(),
+  "url": siteUrlString,
   "description": description,
-};
-
-const jsonLDArticle = publishedDate ? {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": title,
-  "image": ogImageURL.toString(),
   "author": {
     "@type": "Person",
-    "name": author
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": siteName,
-    "logo": {
-      "@type": "ImageObject",
-      "url": new URL("/favicon.svg", Astro.site).toString()
-    }
-  },
-  "datePublished": publishedDate.toISOString(),
-  "dateModified": modifiedDate ? modifiedDate.toISOString() : publishedDate.toISOString(),
-  "mainEntityOfPage": canonicalURL.toString(),
-} : null;
+    "name": author,
+    "url": siteUrlString,
+    "sameAs": socialLinks
+  }
+};
 
-const jsonLD = type === 'article' && jsonLDArticle ? jsonLDArticle : jsonLDWebsite;
+const activeSchema = schema ?? jsonLDWebsite;
 ---
 
 <!DOCTYPE html>
@@ -77,46 +75,41 @@ const jsonLD = type === 'article' && jsonLDArticle ? jsonLDArticle : jsonLDWebsi
     {keywords && keywords.length > 0 && <meta name="keywords" content={keywords.join(', ')} />}
     <link rel="canonical" href={canonicalURL} />
 
-    <!-- Aktivieren der View Transitions -->
+    <!-- Astro View Transitions -->
     <ClientRouter />
 
-    <!-- Dark mode initialization script according to official Tailwind documentation -->
+    <!-- Dark mode initialization -->
     <script is:inline>
-      // Function to apply theme
       function applyTheme() {
-        if (localStorage.theme === 'dark') {
-          document.documentElement.classList.add('dark')
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
         } else {
-          document.documentElement.classList.remove('dark')
+          document.documentElement.classList.remove('dark');
         }
       }
-
-      // Apply on initial load
       applyTheme();
-
-      // Re-apply after view transitions
       document.addEventListener('astro:after-swap', applyTheme);
     </script>
     
-    <!-- Open Graph / Facebook -->
+    <!-- Open Graph -->
     <meta property="og:type" content={type} />
     <meta property="og:url" content={canonicalURL} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImageURL} />
     <meta property="og:site_name" content={siteName} />
-    {publishedDate && <meta property="article:published_time" content={publishedDate.toISOString()} />}
-    {modifiedDate && <meta property="article:modified_time" content={modifiedDate.toISOString()} />}
 
-    <!-- Twitter -->
+    <!-- Twitter / X -->
     <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:site" content="@savphill" />
+    <meta property="twitter:creator" content="@savphill" />
     <meta property="twitter:url" content={canonicalURL} />
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content={ogImageURL} />
     
-    <!-- Strukturierte Daten für SEO -->
-    <script type="application/ld+json" set:html={JSON.stringify(jsonLD)} />
+    <!-- Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify(activeSchema)} />
     
     <style is:inline>
       body {
@@ -127,21 +120,20 @@ const jsonLD = type === 'article' && jsonLDArticle ? jsonLDArticle : jsonLDWebsi
       }
     </style>
   </head>
-  <body class="text-gray-900 bg-white dark:text-gray-300 dark:bg-black transition-colors duration-300">
-    <div class="bg-white dark:bg-black transition-colors duration-300">
+  <body class="text-slate-900 bg-white dark:text-slate-200 dark:bg-slate-950 transition-colors duration-300 min-h-screen">
+    <div class="px-4 sm:px-6">
       <header class="mx-auto max-w-4xl py-8">
         <div class="flex items-center justify-between">
-          <a href="/" class="text-2xl font-semibold" transition:animate="fade">{SITE.name}</a>
+          <a href="/" class="text-2xl font-black tracking-tight text-slate-900 dark:text-white" transition:animate="fade">
+            {SITE.name}
+          </a>
 
-          <!-- Desktop Navigation -->
-          <div class="hidden md:flex items-center gap-6">
-            <nav class="flex items-center gap-6">
-              <a href="/" class="nav-link">Home</a>
-              <a href="/about" class="nav-link">About</a>
-              <a href="/journal" class="nav-link">Journal</a>
-              <a href="/talks" class="nav-link">Talks</a>
-              <a href="/remote" class="nav-link">Offsite Planning</a>
-               <a href="/security" class="nav-link">Security</a>
+          <!-- Focused Desktop Navigation -->
+          <div class="hidden md:flex items-center gap-8">
+            <nav class="flex items-center gap-6 font-medium text-sm text-slate-700 dark:text-slate-300">
+              <a href="/" class="hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors">Home</a>
+              <a href="/about" class="hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors">About</a>
+              <a href="/remote" class="hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors">Offsite Planning</a>
             </nav>
             <DarkModeToggle />
           </div>
@@ -152,54 +144,64 @@ const jsonLD = type === 'article' && jsonLDArticle ? jsonLDArticle : jsonLDWebsi
             <button
               id="mobile-menu-button"
               type="button"
-              class="inline-flex items-center justify-center p-2 bg-white dark:bg-black text-gray-900 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-900 focus:outline-none border-0"
+              class="inline-flex items-center justify-center p-2 bg-transparent text-slate-900 dark:text-slate-300 focus:outline-none border-0"
               aria-expanded="false"
               aria-label="Toggle menu"
             >
-            <svg id="menu-icon" class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-            </svg>
-            <svg id="close-icon" class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-            </svg>
+              <svg id="menu-icon" class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+              <svg id="close-icon" class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
             </button>
           </div>
         </div>
 
-        <!-- Mobile Navigation -->
-        <nav id="mobile-menu" class="hidden md:hidden mt-6 pt-4 border-t border-gray-200 dark:border-gray-800 space-y-1">
-          <a href="/" class="block px-3 py-2 text-sm text-gray-900 dark:text-gray-300 hover:underline">Home</a>
-          <a href="/about" class="block px-3 py-2 text-sm text-gray-900 dark:text-gray-300 hover:underline">About</a>
-          <!--<a href="/journal" class="block px-3 py-2 text-sm text-gray-900 dark:text-gray-300 hover:underline">Journal</a>-->
-          <a href="/talks" class="block px-3 py-2 text-sm text-gray-900 dark:text-gray-300 hover:underline">Talks</a>
-          <a href="/remote" class="block px-3 py-2 text-sm text-gray-900 dark:text-gray-300 hover:underline">Offsite Planning</a>
-          <a href="/security" class="block px-3 py-2 text-sm text-gray-900 dark:text-gray-300 hover:underline">Security</a>
+        <!-- Focused Mobile Navigation -->
+        <nav id="mobile-menu" class="hidden md:hidden mt-6 pt-4 border-t border-slate-200 dark:border-slate-800 space-y-2">
+          <a href="/" class="block px-3 py-2 text-base font-medium text-slate-900 dark:text-slate-200 hover:text-cyan-400">Home</a>
+          <a href="/about" class="block px-3 py-2 text-base font-medium text-slate-900 dark:text-slate-200 hover:text-cyan-400">About</a>
+          <a href="/remote" class="block px-3 py-2 text-base font-medium text-slate-900 dark:text-slate-200 hover:text-cyan-400">Offsite Planning</a>
         </nav>
       </header>
       
-      <main class="py-10" transition:animate="fade">
+      <main class="py-6" transition:animate="fade">
         <slot />
       </main>
       
-      <footer class="max-w-4xl mx-auto py-8 border-t border-gray-200 dark:border-gray-800 mt-12">
-          <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div class="text-sm text-gray-500 dark:text-gray-500">
-              © {new Date().getFullYear()} {SITE.name}
-            </div>
-            <nav class="flex items-center gap-4">
-              <a href="/" class="nav-link-footer">Home</a>
-              <a href="/about" class="nav-link-footer">About</a>
-              <a href="/journal" class="nav-link-footer">Journal</a>
-              <a href="/talks" class="nav-link-footer">Talks</a>
-              <a href="/remote" class="nav-link-footer">Offsite Planning</a>
-              <a href="/security" class="nav-link-footer">Security</a>
-            </nav>
+      <!-- FOOTER -->
+      <footer class="max-w-4xl mx-auto py-8 border-t border-slate-200 dark:border-slate-800 mt-12">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+          <div class="text-xs font-mono text-slate-500">
+            © {new Date().getFullYear()} {SITE.name} • Chiang Mai, Thailand
           </div>
+          
+          <div class="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
+            <nav class="flex items-center gap-4 text-xs font-mono text-slate-600 dark:text-slate-400">
+              <a href="/about" class="hover:underline">About</a>
+              <a href="/remote" class="hover:underline">Offsite Planning</a>
+              <a href="https://offsitethailand.com" target="_blank" rel="noopener noreferrer" class="hover:underline text-cyan-600 dark:text-cyan-400 font-semibold">OffsiteThailand.com ↗</a>
+            </nav>
+
+            <!-- Entity Links -->
+            <div class="flex items-center gap-3.5 sm:border-l border-slate-200 dark:border-slate-800 sm:pl-4">
+              <a href="https://x.com/savphill" target="_blank" rel="noopener noreferrer" aria-label="X / Twitter" class="text-slate-500 hover:text-cyan-400 transition-colors">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+              <a href="https://github.com/savphill" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="text-slate-500 hover:text-cyan-400 transition-colors">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              </a>
+              <a href="https://th.linkedin.com/in/phill-savage" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="text-slate-500 hover:text-cyan-400 transition-colors">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
       </footer>
     </div>
 
     <script>
-      // Mobile menu toggle functionality
       function initMobileMenu() {
         const menuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
@@ -208,45 +210,19 @@ const jsonLD = type === 'article' && jsonLDArticle ? jsonLDArticle : jsonLDWebsi
 
         if (!menuButton || !mobileMenu || !menuIcon || !closeIcon) return;
 
-        menuButton.addEventListener('click', () => {
+        menuButton.onclick = () => {
           const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
-
-          // Toggle menu visibility
           mobileMenu.classList.toggle('hidden');
-
-          // Toggle icons
           menuIcon.classList.toggle('hidden');
           closeIcon.classList.toggle('hidden');
-
-          // Update aria-expanded
           menuButton.setAttribute('aria-expanded', String(!isExpanded));
-        });
-
-        // Close menu when clicking on a link
-        const mobileLinks = mobileMenu.querySelectorAll('a');
-        mobileLinks.forEach(link => {
-          link.addEventListener('click', () => {
-            mobileMenu.classList.add('hidden');
-            menuIcon.classList.remove('hidden');
-            closeIcon.classList.add('hidden');
-            menuButton.setAttribute('aria-expanded', 'false');
-          });
-        });
+        };
       }
 
-      // Dark mode toggle functionality
       function initThemeToggle() {
         const buttons = document.querySelectorAll('.theme-toggle');
-
         buttons.forEach(button => {
-          // Remove existing listener if any
-          const oldHandler = button.themeToggleHandler;
-          if (oldHandler) {
-            button.removeEventListener('click', oldHandler);
-          }
-
-          // Create handler function
-          const handler = function() {
+          button.onclick = function() {
             if (document.documentElement.classList.contains('dark')) {
               localStorage.theme = 'light';
               document.documentElement.classList.remove('dark');
@@ -255,17 +231,12 @@ const jsonLD = type === 'article' && jsonLDArticle ? jsonLDArticle : jsonLDWebsi
               document.documentElement.classList.add('dark');
             }
           };
-
-          button.themeToggleHandler = handler;
-          button.addEventListener('click', handler);
         });
       }
 
-      // Initialize on page load
       initMobileMenu();
       initThemeToggle();
 
-      // Re-initialize after view transitions
       document.addEventListener('astro:after-swap', () => {
         initMobileMenu();
         initThemeToggle();

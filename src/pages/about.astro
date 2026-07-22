@@ -1,108 +1,195 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+// Updated JSON-LD Schema centered on Offsite Leadership & Location Entity
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Phill Savage",
+    "jobTitle": "Client Director & Founder of Offsite Thailand",
+    "url": "https://psavage.net",
+    "image": "https://psavage.net/images/phill.jpg",
+    "description": "Client Director and Founder of Offsite Thailand. Directing high-ROI corporate offsites and retreats for remote tech companies in Chiang Mai and across Thailand.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Chiang Mai",
+      "addressCountry": "TH"
+    },
+    "knowsAbout": [
+      "Corporate Retreat Operations",
+      "Client Leadership & Account Management",
+      "Chiang Mai & Thailand Vendor Logistics",
+      "Remote Tech Team Infrastructure",
+      "Digital Marketing Strategy"
+    ],
+    "worksFor": [
+      {
+        "@type": "Organization",
+        "name": "Offsite Thailand",
+        "url": "https://offsitethailand.com"
+      },
+      {
+        "@type": "Organization",
+        "name": "Ace Marketing Solutions",
+        "url": "https://acemsthailand.com"
+      }
+    ],
+    "sameAs": [
+      "https://offsitethailand.com",
+      "https://acemsthailand.com",
+      "https://x.com/savphill",
+      "https://th.linkedin.com/in/phill-savage"
+    ]
+  }
+};
 ---
 
 <BaseLayout 
-  title="About Phill | AI Search Optimization Expert" 
-  description="About Phill — Specialist in AI SEO and Answer Engine Optimization (AEO). Structuring web data so your business is recommended by conversational search models."
+  title="About Phill Savage | Client Director & Founder of Offsite Thailand" 
+  description="About Phill Savage — Client Director and Founder of Offsite Thailand. Directing bespoke corporate retreats and team offsites in Chiang Mai and across Thailand."
+  keywords={["Phill Savage", "Offsite Thailand Founder", "Chiang Mai Corporate Retreats", "Thailand Team Retreat Director", "Ace Marketing Solutions"]}
 >
-  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
-    
-    <header class="mb-12 pt-10" transition:animate="fade">
-      <div class="flex flex-col md:flex-row gap-8 items-center md:items-start">
-        <img 
-          src="/images/phill.jpg" 
-          alt="Phill Savage — Generative Search Architect" 
-          class="w-40 h-40 rounded-full object-cover grayscale hover:grayscale-0 transition-all duration-500 border-4 border-white dark:border-slate-800 shadow-xl flex-shrink-0"
-        />
+  <!-- Injects JSON-LD Entity Schema for Search Engines & LLMs -->
+  <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+
+  <div class="relative overflow-hidden">
+    <!-- Background Glow FX -->
+    <div class="absolute -top-40 -left-40 w-96 h-96 bg-blue-500/10 dark:bg-blue-600/15 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute top-1/3 -right-40 w-96 h-96 bg-cyan-500/10 dark:bg-cyan-500/15 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 relative z-10">
+      
+      <!-- HERO HEADER -->
+      <header class="mb-12 pt-10" transition:animate="fade">
+        <div class="flex flex-col md:flex-row gap-8 items-center md:items-start">
+          <img 
+            src="/images/phill.jpg" 
+            alt="Phill Savage — Client Director & Founder of Offsite Thailand" 
+            class="w-36 h-36 md:w-40 md:h-40 rounded-full object-cover ring-4 ring-blue-500/20 dark:ring-blue-400/30 shadow-2xl flex-shrink-0"
+          />
+          <div class="text-center md:text-left">
+            <span class="inline-block text-xs font-mono font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400 mb-2">
+              // Client Director & Offsite Architect
+            </span>
+            <h1 class="text-3xl sm:text-4xl md:text-5xl mb-4 font-black tracking-tight text-slate-900 dark:text-white leading-tight">
+              Executing team retreats in <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 dark:from-blue-400 dark:to-cyan-300">Chiang Mai & Thailand.</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed">
+              10+ years directing digital agency operations. Now combining enterprise client leadership with boots-on-the-ground local execution for remote tech companies.
+            </p>
+          </div>
+        </div>
+      </header>
+
+      <!-- KEY METRICS / PROOF BAR -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 py-6 mb-12 border-y border-slate-200/60 dark:border-slate-800/60" transition:animate="fade">
         <div class="text-center md:text-left">
-          <h1 class="text-4xl md:text-5xl mb-4 font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight">
-            I make sure AI models <span class="text-blue-600 dark:text-blue-400">recommend your business.</span>
-          </h1>
-          <p class="text-xl text-slate-600 dark:text-slate-300 max-w-2xl">
-            Ten years managing web infrastructure. Now structuring site data so your business wins the AI search era.
-          </p>
+          <span class="block text-3xl font-black text-slate-900 dark:text-white font-mono">10+</span>
+          <span class="text-[11px] font-mono text-slate-500 dark:text-slate-400 uppercase tracking-wider">Years Leadership</span>
+        </div>
+        <div class="text-center md:text-left">
+          <span class="block text-3xl font-black text-slate-900 dark:text-white font-mono">Chiang Mai</span>
+          <span class="text-[11px] font-mono text-slate-500 dark:text-slate-400 uppercase tracking-wider">Primary HQ</span>
+        </div>
+        <div class="text-center md:text-left">
+          <span class="block text-3xl font-black text-slate-900 dark:text-white font-mono">100+</span>
+          <span class="text-[11px] font-mono text-slate-500 dark:text-slate-400 uppercase tracking-wider">Brand Campaigns</span>
+        </div>
+        <div class="text-center md:text-left">
+          <span class="block text-3xl font-black text-slate-900 dark:text-white font-mono">Ace MS</span>
+          <span class="text-[11px] font-mono text-slate-500 dark:text-slate-400 uppercase tracking-wider">Agency Operations</span>
         </div>
       </div>
-    </header>
 
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-6 py-6 mb-12 border-y border-slate-100 dark:border-slate-800/60" transition:animate="fade">
-      <div class="text-center md:text-left">
-        <span class="block text-3xl font-bold text-slate-900 dark:text-white">10+</span>
-        <span class="text-xs font-mono text-slate-400 uppercase tracking-wider">Years Experience</span>
+      <!-- MAIN BIO / PROSE STORY -->
+      <div class="prose prose-lg dark:prose-invert max-w-3xl mb-16 text-slate-700 dark:text-slate-300 leading-relaxed" transition:animate="fade">
+        <p>
+          I’ve spent over a decade at the intersection of technical strategy, account direction, and digital marketing—primarily running operations as a Director at <strong><a href="https://acemsthailand.com" class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300" target="_blank" rel="noopener noreferrer">Ace Marketing Solutions</a></strong> in Thailand.
+        </p>
+        
+        <p>
+          Across my career, I’ve directly led digital projects and campaign strategies for <strong>over 100 brands</strong>—from luxury hospitality groups to international software enterprises. That background taught me how high-growth organizations operate, how critical strict timelines are, and how much friction can occur when coordinating multi-vendor projects.
+        </p>
+
+        <h2 class="text-2xl font-bold mt-10 mb-4 text-slate-900 dark:text-white">Solving the Tech Team Retreat Problem</h2>
+        <p>
+          As remote work became the standard for software companies, I saw a recurring problem: companies wanted to bring their engineering and product teams together in incredible locations like <strong>Chiang Mai, Phuket, or Bangkok</strong>, but standard event planners simply didn't understand how tech teams operate.
+        </p>
+        
+        <p>
+          Traditional event planners focus on banquet halls and trust hotel Wi-Fi. They don't account for redundant gigabit fiber internet, silent breakout spaces for hackathons, or non-cringe team experiences that engineering culture actually values.
+        </p>
+
+        <p>
+          That is why I launched <strong><a href="https://offsitethailand.com" class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300" target="_blank" rel="noopener noreferrer">Offsite Thailand</a></strong>. We blend senior Client Director oversight with deep local Thai vendor networks to build high-performance corporate offsites from start to finish.
+        </p>
       </div>
-      <div class="text-center md:text-left">
-        <span class="block text-3xl font-bold text-slate-900 dark:text-white">100+</span>
-        <span class="text-xs font-mono text-slate-400 uppercase tracking-wider">Brands Managed</span>
-      </div>
-      <div class="col-span-2 md:col-span-1 text-center md:text-left">
-        <span class="block text-3xl font-bold text-slate-900 dark:text-white">Ace MS</span>
-        <span class="text-xs font-mono text-slate-400 uppercase tracking-wider">Agency Leadership</span>
-      </div>
-    </div>
 
-    <div class="prose prose-lg dark:prose-invert max-w-3xl mb-16 text-slate-600 dark:text-slate-300" transition:animate="fade">
-      <p>
-        I’ve spent the last decade leading technical web projects from the ground up. Most of that time has been spent running operations as a director at <strong><a href="https://acemsthailand.com" class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300">Ace Marketing Solutions</a></strong>. 
-      </p>
-      
-      <p>
-        Under that same banner, I serve as the Project Director for the <strong><a href="https://offsitethailand.com" class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300" target="_blank">Offsite Thailand</a></strong> program, coordinating ground logistics, local venues, and end-to-end retreat operations for remote-first software companies.
-      </p>
-      
-      <p>
-        Over my career, I’ve directly managed the digital setups and platform strategies for <strong>over 100 brands</strong>, ranging from regional boutique hotels to Fortune 500 enterprises.
-      </p>
-
-      <h2 class="text-2xl font-bold mt-10 mb-4 text-slate-900 dark:text-white">The Shift to AI Search</h2>
-      <p>
-        The web is shifting completely. Active buyers are moving away from browsing standard lists of blue links on Google, turning instead to conversational summaries on platforms like ChatGPT, Gemini, and Perplexity. If your online content isn't built to answer their direct questions, your company simply disappears from their recommendations.
-      </p>
-      
-      <p>
-        That’s why I focus strictly on <strong>Generative Search Architecture</strong>. I don't deal in surface-level marketing fluff. I optimize the foundational information layers of your website so AI search models easily find, trust, and reference your business.
-      </p>
-    </div>
-
-    <section class="mb-16" transition:animate="fade">
-      <h2 class="text-xl md:text-2xl font-bold mb-6 text-slate-900 dark:text-white">Technical Focus Areas</h2>
-      
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="bg-slate-50 dark:bg-slate-900/50 p-6 rounded-xl border border-slate-100 dark:border-slate-800/60">
-          <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2">AI Search Diagnostics</h3>
-          <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-            Fixing the broken public data that causes ChatGPT, Perplexity, or Gemini to hallucinate your pricing, list wrong contact info, or actively recommend your competitors instead of you.
-          </p>
+      <!-- CORE FOCUS / PILLARS -->
+      <section class="mb-16" transition:animate="fade">
+        <div class="mb-6">
+          <span class="text-xs font-mono uppercase tracking-widest text-blue-600 dark:text-blue-400 font-bold">// What I Bring to the Table</span>
+          <h2 class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mt-1">Core Pillars of Leadership</h2>
         </div>
         
-        <div class="bg-slate-50 dark:bg-slate-900/50 p-6 rounded-xl border border-slate-100 dark:border-slate-800/60">
-          <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2">AI Recommendation Strategy</h3>
-          <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-            Structuring your website data so when buyers ask an AI engine for the "best B2B platform" or "top regional service," your business is consistently pushed forward as the primary choice.
-          </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          
+          <div class="bg-slate-50 dark:bg-slate-900/60 p-6 rounded-2xl border border-slate-200/80 dark:border-slate-800/80">
+            <div class="text-xs font-mono text-blue-600 dark:text-blue-400 uppercase tracking-wider mb-2">// 01. White-Glove Leadership</div>
+            <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2">Account & Client Director Precision</h3>
+            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+              You deal with a single, experienced point of contact. I manage venue negotiations, caterers, ground transfers, and contingency plans so your People & Ops leads don't have to stress.
+            </p>
+          </div>
+          
+          <div class="bg-slate-50 dark:bg-slate-900/60 p-6 rounded-2xl border border-slate-200/80 dark:border-slate-800/80">
+            <div class="text-xs font-mono text-blue-600 dark:text-blue-400 uppercase tracking-wider mb-2">// 02. Local Ground Execution</div>
+            <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2">Chiang Mai & Thailand Network</h3>
+            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+              Based directly in Northern Thailand with established networks across Chiang Mai, Phuket, Koh Samui, and Bangkok. We know which private villas and venues deliver top-tier service.
+            </p>
+          </div>
+        
+          <div class="bg-slate-50 dark:bg-slate-900/60 p-6 rounded-2xl border border-slate-200/80 dark:border-slate-800/80 md:col-span-2">
+            <div class="text-xs font-mono text-blue-600 dark:text-blue-400 uppercase tracking-wider mb-2">// 03. Developer-Grade Specs</div>
+            <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2">Technical & Digital Marketing Foundation</h3>
+            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+              With over 10 years of experience in web architecture and digital strategy, I ensure every venue is pre-tested for high-speed fiber connectivity, backup power, and seamless remote team workflow support.
+            </p>
+          </div>
+
         </div>
-      
-        <div class="bg-slate-50 dark:bg-slate-900/50 p-6 rounded-xl border border-slate-100 dark:border-slate-800/60 md:col-span-2">
-          <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2">Speed & Security Upgrades (Astro Migration)</h3>
-          <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-            Ditching slow, heavy database platforms for streamlined flat-file code. This eliminates your server hack risks entirely, cuts hosting costs, and makes your site lightning-fast for both human visitors and AI data crawlers.
-          </p>
+      </section>
+
+      <!-- CTA CARD -->
+      <div class="bg-slate-900 text-white dark:bg-slate-900/90 border border-slate-800 rounded-2xl p-8 text-left shadow-2xl relative overflow-hidden" transition:animate="fade">
+        <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-blue-500/20 rounded-full blur-2xl pointer-events-none"></div>
+        
+        <h3 class="text-2xl font-bold text-white mb-2">Planning a retreat for your team?</h3>
+        <p class="text-slate-300 mb-6 max-w-2xl leading-relaxed text-sm sm:text-base">
+          Whether you’re aiming for a mountain hackathon in Chiang Mai or an island-hopping strategic alignment retreat, let’s build a custom itinerary for your organization.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+          <a 
+            href="mailto:hello@psavage.net?subject=Thailand%20Offsite%20Inquiry" 
+            class="inline-flex items-center justify-center px-6 py-3 text-xs font-mono font-bold uppercase tracking-wider text-slate-900 bg-white hover:bg-slate-100 rounded-lg transition-colors text-center"
+          >
+            Email Phill Directly →
+          </a>
+          <a 
+            href="https://offsitethailand.com" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center px-6 py-3 text-xs font-mono font-bold uppercase tracking-wider text-white border border-slate-700 hover:border-slate-500 rounded-lg transition-colors text-center"
+          >
+            Visit OffsiteThailand.com
+          </a>
         </div>
       </div>
-    </section>
 
-    <div class="bg-slate-50 dark:bg-zinc-900 border border-slate-100 dark:border-zinc-800 rounded-xl p-8 text-left" transition:animate="fade">
-      <p class="text-slate-600 dark:text-slate-300 mb-6 max-w-2xl leading-relaxed">
-        When I’m not analyzing AI visibility footprints or engineering site architectures, I’m usually developing clean web systems or publishing my findings in my <a href="/journal" class="text-blue-600 dark:text-blue-400 underline hover:no-underline">journal</a>.
-      </p>
-      
-      <a 
-        href="mailto:hello@psavage.net?subject=Consulting%20Inquiry%20—%20Generative%20Search" 
-        class="inline-flex items-center justify-center px-6 py-3 text-sm font-bold text-white transition-colors bg-blue-600 rounded-md hover:bg-blue-700 dark:bg-white dark:text-slate-900 dark:hover:bg-gray-100"
-      >
-        Let's talk strategy
-      </a>
     </div>
-
   </div>
 </BaseLayout>

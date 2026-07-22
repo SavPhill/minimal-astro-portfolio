@@ -8,6 +8,9 @@ export default defineConfig({
   site: 'https://psavage.net',
   prefetch: true,
   compressHTML: true,
+  devToolbar: {
+    enabled: false // Prevents 504 dev-toolbar pre-bundling errors in Vite 6
+  },
   image: {
     service: {
       entrypoint: 'astro/assets/services/sharp',
@@ -26,7 +29,6 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
   integrations: [mdx(), sitemap()],
-  // Your redirect rule lives cleanly right here:
   redirects: {
     '/why-website-projects-go-off-the-rails-scope-creep-explained/': '/posts/why-website-projects-go-off-the-rails-scope-creep-explained/'
   }
