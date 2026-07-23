@@ -1,5 +1,12 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+// Fetch and sort the most recent 3 blog posts
+const allPosts = await getCollection('posts');
+const recentPosts = allPosts
+  .sort((a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf())
+  .slice(0, 3);
 
 const strategistSchema = {
   "@context": "https://schema.org",
@@ -442,6 +449,50 @@ const strategistSchema = {
             <span class="text-xs font-mono px-3 py-1.5 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 font-medium">USD / EUR / GBP / THB</span>
             <span class="text-xs font-mono px-3 py-1.5 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-slate-700 dark:text-slate-300 font-medium">Ace MS Invoicing</span>
           </div>
+        </div>
+      </section>
+
+      <!-- RECENT BLOG / INSIGHTS FEED -->
+      <section class="py-12 border-t border-slate-200/60 dark:border-slate-800/60" transition:animate="fade">
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4">
+          <div class="text-left">
+            <span class="text-xs font-mono uppercase tracking-widest text-blue-600 dark:text-blue-400 font-bold">// Strategy & Insights</span>
+            <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white mt-1">
+              Latest Pipeline Logic
+            </h2>
+          </div>
+          <a href="/blog" class="hidden sm:inline-flex items-center gap-1.5 text-sm font-mono font-bold text-blue-600 dark:text-blue-400 hover:text-blue-500 transition-colors group">
+            View All Posts 
+            <span class="group-hover:translate-x-0.5 transition-transform" aria-hidden="true">→</span>
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {recentPosts.map(post => (
+            <a href={`/blog/${post.slug}`} class="group flex flex-col p-6 rounded-2xl bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 hover:border-blue-400/50 dark:hover:border-blue-500/50 transition-all hover:shadow-xl hover:-translate-y-1">
+              <time datetime={post.data.date.toISOString()} class="text-[11px] font-mono text-slate-500 dark:text-slate-400 mb-3 block">
+                {new Date(post.data.date).toLocaleDateString('en-US', { 
+                  year: 'numeric', 
+                  month: 'short', 
+                  day: 'numeric' 
+                })}
+              </time>
+              <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors line-clamp-2">
+                {post.data.title}
+              </h3>
+              <p class="text-xs text-slate-600 dark:text-slate-400 line-clamp-3 mt-auto leading-relaxed">
+                {post.data.excerpt || post.data.description}
+              </p>
+            </a>
+          ))}
+        </div>
+        
+        <!-- Mobile View All Link -->
+        <div class="mt-6 sm:hidden text-center">
+           <a href="/blog" class="inline-flex items-center gap-1.5 text-sm font-mono font-bold text-blue-600 dark:text-blue-400 hover:text-blue-500 transition-colors group">
+            View All Posts 
+            <span class="group-hover:translate-x-0.5 transition-transform" aria-hidden="true">→</span>
+          </a>
         </div>
       </section>
 
