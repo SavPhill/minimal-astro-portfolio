@@ -30,7 +30,7 @@ const {
   schema
 } = Astro.props;
 
-// STRICT MODE FIX: Fallback to the current request URL if Astro.site is undefined
+// STRICT MODE FIX: Fallback to current request URL if Astro.site is undefined
 const siteBase = Astro.site ?? Astro.url;
 // STRICT MODE FIX: Explicitly convert URL objects to strings for HTML attributes
 const canonicalURL = new URL(Astro.url.pathname, siteBase).toString();
@@ -44,7 +44,8 @@ const socialLinks = [
   "https://github.com/savphill",
   "https://th.linkedin.com/in/phill-savage",
   "https://profiles.wordpress.org/phillsav/",
-  "https://offsitethailand.com"
+  "https://offsitethailand.com",
+  "https://acemsthailand.com"
 ];
 
 const jsonLDWebsite = {
@@ -122,7 +123,7 @@ const activeSchema = schema ?? jsonLDWebsite;
   </head>
   <body class="text-slate-900 bg-white dark:text-slate-200 dark:bg-slate-950 transition-colors duration-300 min-h-screen">
     <div class="px-4 sm:px-6">
-      <header class="mx-auto max-w-4xl py-8">
+      <header class="mx-auto max-w-4xl py-6 md:py-8">
         <div class="flex items-center justify-between">
           <a href="/" class="text-2xl font-black tracking-tight text-slate-900 dark:text-white" transition:animate="fade">
             {SITE.name}
@@ -133,6 +134,7 @@ const activeSchema = schema ?? jsonLDWebsite;
             <nav class="flex items-center gap-6 font-medium text-sm text-slate-700 dark:text-slate-300">
               <a href="/" class="hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors">Home</a>
               <a href="/about" class="hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors">About</a>
+              <a href="/journal" class="hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors">Blog</a>
               <a href="/remote" class="hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors">Strategy Consulting</a>
               <a href="/security" class="hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors">Security</a>
             </nav>
@@ -140,31 +142,42 @@ const activeSchema = schema ?? jsonLDWebsite;
           </div>
 
           <!-- Mobile Navigation Controls -->
-          <div class="md:hidden flex items-center gap-2">
+          <div class="md:hidden flex items-center gap-3">
             <DarkModeToggle />
             <button
               id="mobile-menu-button"
               type="button"
-              class="inline-flex items-center justify-center p-2 bg-transparent text-slate-900 dark:text-slate-300 focus:outline-none border-0"
+              class="inline-flex items-center justify-center p-3 -mr-2 rounded-xl text-slate-900 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800/80 focus:outline-none transition-colors touch-manipulation cursor-pointer"
               aria-expanded="false"
               aria-label="Toggle menu"
             >
-              <svg id="menu-icon" class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <svg id="menu-icon" class="block h-6 w-6 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
               </svg>
-              <svg id="close-icon" class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <svg id="close-icon" class="hidden h-6 w-6 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
           </div>
         </div>
 
-        <!-- Focused Mobile Navigation -->
-        <nav id="mobile-menu" class="hidden md:hidden mt-6 pt-4 border-t border-slate-200 dark:border-slate-800 space-y-2">
-          <a href="/" class="block px-3 py-2 text-base font-medium text-slate-900 dark:text-slate-200 hover:text-cyan-400">Home</a>
-          <a href="/about" class="block px-3 py-2 text-base font-medium text-slate-900 dark:text-slate-200 hover:text-cyan-400">About</a>
-          <a href="/remote" class="block px-3 py-2 text-base font-medium text-slate-900 dark:text-slate-200 hover:text-cyan-400">Strategy Consulting</a>
-          <a href="/security" class="block px-3 py-2 text-base font-medium text-slate-900 dark:text-slate-200 hover:text-cyan-400">Security</a>
+        <!-- Accessible & Touch-Optimized Mobile Navigation -->
+        <nav id="mobile-menu" class="hidden md:hidden mt-4 pt-4 border-t border-slate-200 dark:border-slate-800 space-y-2">
+          <a href="/" class="block px-4 py-3 rounded-lg text-base font-medium text-slate-900 dark:text-slate-100 bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60 hover:text-cyan-500 active:bg-cyan-500/10 transition-colors touch-manipulation">
+            Home
+          </a>
+          <a href="/about" class="block px-4 py-3 rounded-lg text-base font-medium text-slate-900 dark:text-slate-100 bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60 hover:text-cyan-500 active:bg-cyan-500/10 transition-colors touch-manipulation">
+            About
+          </a>
+          <a href="/journal" class="block px-4 py-3 rounded-lg text-base font-medium text-slate-900 dark:text-slate-100 bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60 hover:text-cyan-500 active:bg-cyan-500/10 transition-colors touch-manipulation">
+            Blog
+          </a>
+          <a href="/remote" class="block px-4 py-3 rounded-lg text-base font-medium text-slate-900 dark:text-slate-100 bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60 hover:text-cyan-500 active:bg-cyan-500/10 transition-colors touch-manipulation">
+            Strategy Consulting
+          </a>
+          <a href="/security" class="block px-4 py-3 rounded-lg text-base font-medium text-slate-900 dark:text-slate-100 bg-slate-50 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800/60 hover:text-cyan-500 active:bg-cyan-500/10 transition-colors touch-manipulation">
+            Security
+          </a>
         </nav>
       </header>
       
@@ -182,8 +195,10 @@ const activeSchema = schema ?? jsonLDWebsite;
           <div class="flex flex-col sm:flex-row items-center gap-4 sm:gap-6">
             <nav class="flex items-center gap-4 text-xs font-mono text-slate-600 dark:text-slate-400">
               <a href="/about" class="hover:underline">About</a>
+              <a href="/about" class="hover:underline">Blog</a>
               <a href="/remote" class="hover:underline">Strategy Consulting</a>
-              <a href="https://offsitethailand.com" target="_blank" rel="noopener noreferrer" class="hover:underline text-cyan-600 dark:text-cyan-400 font-semibold">OffsiteThailand.com ↗</a>
+              <a href="/security" class="hover:underline">Security</a>
+              <a href="https://acemsthailand.com" target="_blank" rel="noopener noreferrer" class="hover:underline text-cyan-600 dark:text-cyan-400 font-semibold">Ace MS ↗</a>
             </nav>
 
             <!-- Entity Links -->
@@ -204,27 +219,54 @@ const activeSchema = schema ?? jsonLDWebsite;
     </div>
 
     <script>
-      function initMobileMenu() {
-        const menuButton = document.getElementById('mobile-menu-button');
+      function setupMobileMenu() {
+        // Cast to HTMLButtonElement so TypeScript knows it has standard button properties/methods
+        const menuButton = document.getElementById('mobile-menu-button') as HTMLButtonElement | null;
         const mobileMenu = document.getElementById('mobile-menu');
         const menuIcon = document.getElementById('menu-icon');
         const closeIcon = document.getElementById('close-icon');
 
         if (!menuButton || !mobileMenu || !menuIcon || !closeIcon) return;
 
-        menuButton.onclick = () => {
-          const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+        // Clone node to safely reset event listeners during View Transitions
+        const newButton = menuButton.cloneNode(true) as HTMLButtonElement;
+        if (menuButton.parentNode) {
+          menuButton.parentNode.replaceChild(newButton, menuButton);
+        }
+
+        newButton.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          // Use standard camelCase getAttribute
+          const isExpanded = newButton.getAttribute('aria-expanded') === 'true';
+          
           mobileMenu.classList.toggle('hidden');
           menuIcon.classList.toggle('hidden');
           closeIcon.classList.toggle('hidden');
-          menuButton.setAttribute('aria-expanded', String(!isExpanded));
-        };
+          newButton.setAttribute('aria-expanded', String(!isExpanded));
+        });
+
+        // Close menu automatically on mobile link tap
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            menuIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+            newButton.setAttribute('aria-expanded', 'false');
+          });
+        });
       }
 
-      function initThemeToggle() {
+      function setupThemeToggle() {
         const buttons = document.querySelectorAll('.theme-toggle');
         buttons.forEach(button => {
-          button.onclick = function() {
+          const newBtn = button.cloneNode(true);
+          if (button.parentNode) {
+            button.parentNode.replaceChild(newBtn, button);
+          }
+          
+          newBtn.addEventListener('click', () => {
             if (document.documentElement.classList.contains('dark')) {
               localStorage.theme = 'light';
               document.documentElement.classList.remove('dark');
@@ -232,16 +274,22 @@ const activeSchema = schema ?? jsonLDWebsite;
               localStorage.theme = 'dark';
               document.documentElement.classList.add('dark');
             }
-          };
+          });
         });
       }
 
-      initMobileMenu();
-      initThemeToggle();
+      // Initial run
+      setupMobileMenu();
+      setupThemeToggle();
 
+      // Astro View Transition Lifecycle Hooks
       document.addEventListener('astro:after-swap', () => {
-        initMobileMenu();
-        initThemeToggle();
+        setupMobileMenu();
+        setupThemeToggle();
+      });
+      document.addEventListener('astro:page-load', () => {
+        setupMobileMenu();
+        setupThemeToggle();
       });
     </script>
   </body>
