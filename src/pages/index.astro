@@ -452,7 +452,7 @@ const strategistSchema = {
         </div>
       </section>
 
-      <!-- RECENT BLOG / INSIGHTS FEED -->
+          <!-- RECENT BLOG / INSIGHTS FEED -->
       <section class="py-12 border-t border-slate-200/60 dark:border-slate-800/60" transition:animate="fade">
         <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4">
           <div class="text-left">
@@ -461,7 +461,8 @@ const strategistSchema = {
               Latest Pipeline Logic
             </h2>
           </div>
-          <a href="/blog" class="hidden sm:inline-flex items-center gap-1.5 text-sm font-mono font-bold text-blue-600 dark:text-blue-400 hover:text-blue-500 transition-colors group">
+          <!-- Updated /posts link -->
+          <a href="/posts" class="hidden sm:inline-flex items-center gap-1.5 text-sm font-mono font-bold text-blue-600 dark:text-blue-400 hover:text-blue-500 transition-colors group">
             View All Posts 
             <span class="group-hover:translate-x-0.5 transition-transform" aria-hidden="true">→</span>
           </a>
@@ -469,7 +470,8 @@ const strategistSchema = {
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
           {recentPosts.map(post => (
-            <a href={`/blog/${post.slug}`} class="group flex flex-col p-6 rounded-2xl bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 hover:border-blue-400/50 dark:hover:border-blue-500/50 transition-all hover:shadow-xl hover:-translate-y-1">
+            <!-- FIX: Using post.id instead of post.slug, and /posts/ route -->
+            <a href={`/posts/${post.id}`} class="group flex flex-col p-6 rounded-2xl bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 hover:border-blue-400/50 dark:hover:border-blue-500/50 transition-all hover:shadow-xl hover:-translate-y-1">
               <time datetime={post.data.date.toISOString()} class="text-[11px] font-mono text-slate-500 dark:text-slate-400 mb-3 block">
                 {new Date(post.data.date).toLocaleDateString('en-US', { 
                   year: 'numeric', 
@@ -489,12 +491,14 @@ const strategistSchema = {
         
         <!-- Mobile View All Link -->
         <div class="mt-6 sm:hidden text-center">
-           <a href="/blog" class="inline-flex items-center gap-1.5 text-sm font-mono font-bold text-blue-600 dark:text-blue-400 hover:text-blue-500 transition-colors group">
+           <!-- Updated /posts link -->
+           <a href="/posts" class="inline-flex items-center gap-1.5 text-sm font-mono font-bold text-blue-600 dark:text-blue-400 hover:text-blue-500 transition-colors group">
             View All Posts 
             <span class="group-hover:translate-x-0.5 transition-transform" aria-hidden="true">→</span>
           </a>
         </div>
       </section>
+
 
       <!-- ENTERPRISE FAQ ACCORDION -->
       <section class="py-12 border-t border-slate-200/60 dark:border-slate-800/60" transition:animate="fade">
