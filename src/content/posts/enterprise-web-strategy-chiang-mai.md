@@ -54,7 +54,7 @@ Living in Chiang Mai means living in one of the world's premier specialty coffee
 
 Temperature, water pressure, grind size, and extraction yield—if one variable is off, the cup is ruined.
 
-There is a brilliant, direct synergy between how a barista dials in a shot of espresso at Akha Ama or Graph and how we manage a modern static site build pipeline.
+There is a brilliant, direct synergy between how a barista dials in a shot of espresso at Akha Ama (my favourite coffee shop) and how we manage a modern static site build pipeline.
 
 ```text
    Espresso Extraction Pipeline              Jamstack Build & Deployment Pipeline
@@ -121,7 +121,8 @@ const { title, description, schemaData } = Astro.props;
 
 By switching our focus from legacy CMS management to static site generation with Astro, we eliminate server management headaches and give clients sub-second page delivery guaranteed across every continent.
 
-To support the regional tech ecosystem, we also collaborate with grassroots initiatives like `aichiangmai.com`, working alongside local developers to explore how static site engines like Astro integrate seamlessly with localized AI data workflows.
+To support the regional tech ecosystem, we also collaborate with grassroots initiatives like [AI Chiang Mai](https://aichiangmai.com/)
+, working alongside local developers to explore how static site engines like Astro integrate seamlessly with localized AI data workflows.
 
 ---
 
