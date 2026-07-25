@@ -28,7 +28,8 @@ There is a massive misconception in Western boardrooms about what operating out 
 
 In the world of modern web engineering and search, the reality is the exact opposite.
 
-Chiang Mai is home to the world-renowned Chiang Mai SEO Conference, an annual gathering where the absolute top tier of global search practitioners, SaaS founders, and algorithm researchers meet to dissect search updates. The founders of multi-million dollar search tools, vector database pioneers, and engineers who spend their lives reverse-engineering how LLMs parse knowledge graphs call this city home.
+Chiang Mai is home to the world-renowned [Chiang Mai SEO Conference](https://chiangmaiseoconference.com/)
+,an annual gathering where the absolute top tier of global search practitioners, SaaS founders, and algorithm researchers meet to dissect search updates. The founders of multi-million dollar search tools, vector database pioneers, and engineers who spend their lives reverse-engineering how LLMs parse knowledge graphs call this city home.
 
 ```text
 +-----------------------------------------------------------------------------------+
@@ -210,7 +211,8 @@ If your platform fails more than two of these checks, your web infrastructure is
 
 The web isn't getting any simpler. As search engines continue their shift toward AI-generated answers, vector embeddings, and direct semantic recommendations, the gap between traditional monolithic websites and high-performance Jamstack engines will only widen.
 
-Living and working in Chiang Mai for the past decade through Ace Marketing Solutions has proven one thing conclusively: Great technical execution isn't defined by your postcode; it's defined by your standards and willingness to adapt.
+Living and working in Chiang Mai for the past decade through [Ace Marketing Solutions](https://acemsthailand.com/)
+ has proven one thing conclusively: Great technical execution isn't defined by your postcode; it's defined by your standards and willingness to adapt.
 
 By stepping away from legacy CMS limitations, embracing zero-bloat frameworks like Astro, and leveraging the active search intelligence of the Chiang Mai community, we can build web infrastructure that consistently outpaces the status quo.
 
