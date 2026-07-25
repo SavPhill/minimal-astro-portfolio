@@ -1,5 +1,3 @@
-Ah, I apologize for that! The inner code blocks (like the ASCII art and the Astro code) prematurely closed the outer markdown block, causing it to render incorrectly.
-Here is the complete text safely wrapped in a secure code block so you can copy it perfectly:
 ---
 title: "The Silicon Valley of Search: Why Enterprise Web Strategy and GEO Belong in Chiang Mai"
 date: 2026-07-25
