@@ -14,7 +14,7 @@ If you had told my younger self—sitting in a damp office in Essex nursing a lu
 
 Back home in the UK, the standard agency playbook was simple: rent a plush office near London or Manchester, charge clients astronomical monthly retainers to cover the overheads, and deliver a monthly PDF report full of vanity metrics that nobody actually read.
 
-Ten years ago, I packed up my technical background, traded the M25 gridlock for the winding roads around Doi Suthep, and founded Ace Marketing Solutions here in Thailand. Over that decade, I’ve watched a fascinating transformation take place.
+Ten years ago, I packed up my technical background, traded the M25 gridlock for the winding roads around Doi Suthep, and somehow found myself as Director at Ace Marketing Solutions here in Thailand. Over that decade, I’ve watched a fascinating transformation take place.
 
 Chiang Mai hasn't just become a pleasant place for creative minds to gather; it has quietly evolved into the indisputable global testing crucible for organic search, artificial intelligence discovery, and modern web engineering.
 
