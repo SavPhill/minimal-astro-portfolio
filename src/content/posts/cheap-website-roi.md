@@ -1,4 +1,3 @@
-# 
 ---
 title: "Why AI Search Engines Ignore Cheap Websites (And How to Fix It)"
 date: 2026-08-01
