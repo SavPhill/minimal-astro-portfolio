@@ -1,28 +1,30 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-// Updated JSON-LD Schema centered on Web Strategist & GEO Entity
+// Updated JSON-LD Schema centered on Digital Transformation & AI Automation
 const schemaData = {
   "@context": "https://schema.org",
   "@type": "ProfilePage",
   "mainEntity": {
     "@type": "Person",
     "name": "Phill Savage",
-    "jobTitle": "Principal Web Strategist & Client Director",
+    "jobTitle": "Digital Transformation & AI Automation Consultant | Client Director",
     "url": "https://psavage.net",
     "image": "https://psavage.net/images/phill.jpg",
-    "description": "Principal Web Strategist and Client Director at Ace Marketing Solutions in Chiang Mai, Thailand. Advising growth brands on digital architecture, conversion marketing, and Generative Engine Optimization (GEO).",
+    "description": "Digital Transformation and AI Automation Consultant based in Chiang Mai, Thailand. Client Director at Ace Marketing Solutions. Specializing in business process audits, workflow automation, SOP design, and GEO web systems.",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Chiang Mai",
       "addressCountry": "TH"
     },
     "knowsAbout": [
+      "Digital Transformation",
+      "AI & Workflow Automation",
+      "Business Process Audits",
+      "SOP Design & Systems",
       "Web Strategy & Architecture",
       "Generative Engine Optimization (GEO)",
-      "Growth & Performance Marketing",
-      "Astro & Jamstack Development",
-      "Client Leadership & Account Management"
+      "Technical SEO"
     ],
     "worksFor": [
       {
@@ -41,9 +43,9 @@ const schemaData = {
 ---
 
 <BaseLayout 
-  title="About Phill Savage | Web Strategist & Growth Marketing Director" 
-  description="About Phill Savage — Principal Web Strategist and Client Director at Ace Marketing Solutions in Chiang Mai, Thailand. Architecting high-converting web systems and GEO strategies for scaling tech brands."
-  keywords={["Phill Savage", "Web Strategist Chiang Mai", "Generative Engine Optimization", "GEO Strategy Thailand", "Growth Marketing Director", "Ace Marketing Solutions"]}
+  title="About Phill Savage | Digital Transformation & AI Automation Consultant" 
+  description="About Phill Savage — Digital Transformation & AI Automation Consultant and Client Director at Ace Marketing Solutions in Chiang Mai, Thailand. Eliminating operational bottlenecks and building web/GEO growth systems."
+  keywords={["Phill Savage", "Digital Transformation Consultant", "AI Automation Consultant Chiang Mai", "Process Audit Thailand", "Generative Engine Optimization", "Ace Marketing Solutions"]}
 >
   <!-- Injects JSON-LD Entity Schema for Search Engines & LLMs -->
   <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
@@ -60,18 +62,18 @@ const schemaData = {
         <div class="flex flex-col md:flex-row gap-8 items-center md:items-start">
           <img 
             src="/images/phill.jpg" 
-            alt="Phill Savage — Web Strategist & Client Director" 
+            alt="Phill Savage — Digital Transformation & AI Automation Consultant" 
             class="w-36 h-36 md:w-40 md:h-40 rounded-full object-cover ring-4 ring-blue-500/20 dark:ring-blue-400/30 shadow-2xl flex-shrink-0"
           />
           <div class="text-center md:text-left">
             <span class="inline-block text-xs font-mono font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400 mb-2">
-              // Web Strategist & Growth Architect
+              // Digital Transformation & AI Automation Consultant
             </span>
             <h1 class="text-3xl sm:text-4xl md:text-5xl mb-4 font-black tracking-tight text-slate-900 dark:text-white leading-tight">
-              Building high-ROI web systems in <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 dark:from-blue-400 dark:to-cyan-300">Chiang Mai & Thailand.</span>
+              Fixing process bottlenecks & building growth engines in <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 dark:from-blue-400 dark:to-cyan-300">Chiang Mai & Thailand.</span>
             </h1>
             <p class="text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed">
-              10+ years directing digital agency operations. Combining high-performance web architecture, conversion-focused growth marketing, and Generative Engine Optimization (GEO).
+              10+ years directing agency operations. I help B2B and tech businesses streamline operations with AI automation and SOPs—then build the high-speed web strategy to turn efficiency into pipeline.
             </p>
           </div>
         </div>
@@ -81,7 +83,7 @@ const schemaData = {
       <div class="grid grid-cols-2 md:grid-cols-4 gap-6 py-6 mb-12 border-y border-slate-200/60 dark:border-slate-800/60" transition:animate="fade">
         <div class="text-center md:text-left">
           <span class="block text-3xl font-black text-slate-900 dark:text-white font-mono">10+</span>
-          <span class="text-[11px] font-mono text-slate-500 dark:text-slate-400 uppercase tracking-wider">Years Marketing</span>
+          <span class="text-[11px] font-mono text-slate-500 dark:text-slate-400 uppercase tracking-wider">Years Strategy</span>
         </div>
         <div class="text-center md:text-left">
           <span class="block text-3xl font-black text-slate-900 dark:text-white font-mono">Chiang Mai</span>
@@ -89,7 +91,7 @@ const schemaData = {
         </div>
         <div class="text-center md:text-left">
           <span class="block text-3xl font-black text-slate-900 dark:text-white font-mono">100+</span>
-          <span class="text-[11px] font-mono text-slate-500 dark:text-slate-400 uppercase tracking-wider">Digital Campaigns</span>
+          <span class="text-[11px] font-mono text-slate-500 dark:text-slate-400 uppercase tracking-wider">Projects Guided</span>
         </div>
         <div class="text-center md:text-left">
           <span class="block text-3xl font-black text-slate-900 dark:text-white font-mono">Ace MS</span>
@@ -100,57 +102,62 @@ const schemaData = {
       <!-- MAIN BIO / PROSE STORY -->
       <div class="prose prose-lg dark:prose-invert max-w-3xl mb-16 text-slate-700 dark:text-slate-300 leading-relaxed" transition:animate="fade">
         <p>
-          I’ve spent over a decade at the intersection of web architecture, growth marketing, and account direction—primarily leading agency initiatives as Client Director at <strong><a href="https://acemsthailand.com" class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300" target="_blank" rel="noopener noreferrer">Ace Marketing Solutions</a></strong> in Chiang Mai, Thailand.
+          I’ve spent over a decade at the intersection of business operations, digital architecture, and growth marketing—leading agency initiatives as Client Director at <strong><a href="https://acemsthailand.com" class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300" target="_blank" rel="noopener noreferrer">Ace Marketing Solutions</a></strong> in Chiang Mai, Thailand.
         </p>
         
         <p>
-          Throughout my career, I’ve overseen technical digital transformations and multi-channel acquisition strategies for <strong>over 100 brands</strong>—from scaling B2B tech platforms to high-end hospitality groups. That experience shaped my belief that a company's website should never act as a passive digital business card, but as a high-performing engine for predictable revenue.
+          Working with <strong>over 100 brands</strong>—from scaling B2B SaaS platforms to high-growth service firms—taught me a fundamental lesson: most companies don't actually have a marketing problem. They have a process problem.
         </p>
 
-        <h2 class="text-2xl font-bold mt-10 mb-4 text-slate-900 dark:text-white">Navigating the AI Search Shift</h2>
+        <h2 class="text-2xl font-bold mt-10 mb-4 text-slate-900 dark:text-white">Why Process Must Come Before Growth</h2>
         <p>
-          As search behavior undergoes its biggest shift in two decades, standard SEO playbooks are rapidly losing momentum. Today's prospective customers no longer rely solely on blue search links—they ask **ChatGPT, Perplexity, Gemini, and Claude** for direct recommendations and summaries.
+          Too many growth projects fail because companies throw expensive ad campaigns, shiny AI tools, or fancy web redesigns at fundamentally messy workflows. They accumulate software bloat and founder-dependent processes without fixing the underlying drag.
         </p>
         
         <p>
-          Most brands remain unprepared for this shift. They continue dumping budget into slow, bloated CMS installations and generic content strategies that fail to establish true entity authority inside Large Language Models (LLMs).
+          My consulting work starts with diagnosis. I map how work actually moves through a business, identify where time and revenue are leaking, and fix those bottlenecks using practical AI automations and repeatable SOPs.
         </p>
 
+        <h2 class="text-2xl font-bold mt-10 mb-4 text-slate-900 dark:text-white">Turning Internal Efficiency into Pipeline</h2>
         <p>
-          My advisory work focuses on bridging this exact gap. By coupling cutting-edge web architecture (utilizing modern frameworks like Astro) with **Generative Engine Optimization (GEO)**, I help founders and marketing teams structure their digital footprint so AI platforms consistently surface and cite their products as authoritative industry solutions.
+          Once your backend operation is clean, fast, and documented, we turn that efficiency outward. We build modern, sub-second web architecture (using frameworks like Astro) paired with **Generative Engine Optimization (GEO)** and technical SEO.
+        </p>
+        
+        <p>
+          This ensures that as search shifts toward conversational AI platforms like **ChatGPT, Perplexity, and Gemini**, your business isn't just operationally lean—it's structurally positioned to be discovered, cited, and recommended by modern answer engines.
         </p>
       </div>
 
       <!-- CORE FOCUS / PILLARS -->
       <section class="mb-16" transition:animate="fade">
         <div class="mb-6">
-          <span class="text-xs font-mono uppercase tracking-widest text-blue-600 dark:text-blue-400 font-bold">// Strategic Capability</span>
-          <h2 class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mt-1">Core Pillars of Strategy</h2>
+          <span class="text-xs font-mono uppercase tracking-widest text-blue-600 dark:text-blue-400 font-bold">// Core Expertise</span>
+          <h2 class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mt-1">Pillars of Transformation</h2>
         </div>
         
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           
           <div class="bg-slate-50 dark:bg-slate-900/60 p-6 rounded-2xl border border-slate-200/80 dark:border-slate-800/80">
-            <div class="text-xs font-mono text-blue-600 dark:text-blue-400 uppercase tracking-wider mb-2">// 01. Web Architecture & UX</div>
-            <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2">High-Performance Jamstack Builds</h3>
+            <div class="text-xs font-mono text-blue-600 dark:text-blue-400 uppercase tracking-wider mb-2">// 01. Process & Automation</div>
+            <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2">AI Workflows & SOP Design</h3>
             <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-              We design and refactor websites for sub-second page loads, immaculate Core Web Vitals, and friction-free user flows using modern SSG and headless CMS setups.
+              Auditing operational drag, deploying AI toolchains to automate repetitive tasks, and writing clear SOPs so your team operates smoothly without founder reliance.
             </p>
           </div>
           
           <div class="bg-slate-50 dark:bg-slate-900/60 p-6 rounded-2xl border border-slate-200/80 dark:border-slate-800/80">
-            <div class="text-xs font-mono text-blue-600 dark:text-blue-400 uppercase tracking-wider mb-2">// 02. LLM Search Authority</div>
-            <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2">Generative Engine Optimization (GEO)</h3>
+            <div class="text-xs font-mono text-blue-600 dark:text-blue-400 uppercase tracking-wider mb-2">// 02. Web Architecture & GEO</div>
+            <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2">High-Speed Search Systems</h3>
             <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-              Engineering JSON-LD schema graphs, brand entity signals, and authoritative content structures so generative AI search tools actively recommend your brand.
+              Building sub-second edge platforms and structuring JSON-LD entity graphs so search engines and AI assistants actively recommend your brand.
             </p>
           </div>
         
           <div class="bg-slate-50 dark:bg-slate-900/60 p-6 rounded-2xl border border-slate-200/80 dark:border-slate-800/80 md:col-span-2">
-            <div class="text-xs font-mono text-blue-600 dark:text-blue-400 uppercase tracking-wider mb-2">// 03. Growth Marketing Execution</div>
-            <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2">Agency-Backed Client Direction</h3>
+            <div class="text-xs font-mono text-blue-600 dark:text-blue-400 uppercase tracking-wider mb-2">// 03. Managed Delivery</div>
+            <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2">Agency-Backed Client Leadership</h3>
             <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-              Through my executive directorship at <a href="https://acemsthailand.com" target="_blank" rel="noopener noreferrer" class="underline hover:text-blue-600">Ace Marketing Solutions</a>, we provide full end-to-end execution—from messaging alignment and funnel optimization to multi-currency commercial invoicing and SLA support.
+              Through my executive role at <a href="https://acemsthailand.com" target="_blank" rel="noopener noreferrer" class="underline hover:text-blue-600">Ace Marketing Solutions</a>, we provide full implementation support—from workflow builds and web engineering to multi-currency invoicing and SLA backing.
             </p>
           </div>
 
@@ -161,14 +168,14 @@ const schemaData = {
       <div class="bg-slate-900 text-white dark:bg-slate-900/90 border border-slate-800 rounded-2xl p-8 text-left shadow-2xl relative overflow-hidden" transition:animate="fade">
         <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-blue-500/20 rounded-full blur-2xl pointer-events-none"></div>
         
-        <h3 class="text-2xl font-bold text-white mb-2">Ready to modernize your digital web strategy?</h3>
+        <h3 class="text-2xl font-bold text-white mb-2">Ready to eliminate your business bottlenecks?</h3>
         <p class="text-slate-300 mb-6 max-w-2xl leading-relaxed text-sm sm:text-base">
-          Whether you need a full web performance rebuild, conversion rate optimization, or a GEO blueprint to capture AI search market share, let’s audit your site.
+          Whether you need a process audit, an AI automation roadmap, or a modern web strategy to capture AI search intent, let's look at your systems.
         </p>
         
         <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
           <a 
-            href="mailto:hello@psavage.net?subject=Web%20Strategy%20%26%20GEO%20Audit" 
+            href="mailto:hello@psavage.net?subject=Process%20Audit%20%26%20Transformation" 
             class="inline-flex items-center justify-center px-6 py-3 text-xs font-mono font-bold uppercase tracking-wider text-slate-900 bg-white hover:bg-slate-100 rounded-lg transition-colors text-center"
           >
             Email Phill Directly →
