@@ -49,11 +49,27 @@ const strategistSchema = {
       <div class="space-y-4 text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
         <p>Hello, I'm Phill. I live in Chiang Mai, Thailand.</p>
         <p>After spending years helping remote teams fix their digital workflows, I realized the best way to solve team friction is to get everyone in the same room.</p>
-        <p>That's why I created Offsite Thailand. Along with Boutiq Hospitality, we design corporate retreats that help distributed teams actually reconnect.</p>
+        <p>That's why I created <a href="https://offsitethailand.com" target="_blank" rel="noopener noreferrer" class="underline hover:text-slate-900 dark:hover:text-white transition-colors">Offsite Thailand</a>. Along with <a href="https://boutiqthailand.com" target="_blank" rel="noopener noreferrer" class="underline hover:text-slate-900 dark:hover:text-white transition-colors">Boutiq Hospitality</a>, we design corporate retreats that help distributed teams actually reconnect.</p>
+      </div>
+
+      <div class="my-6 space-y-3">
+        <p class="text-xs font-semibold uppercase tracking-wider text-slate-400">Is your remote team due for an offsite?</p>
+        <div class="flex flex-wrap gap-2" id="checklist">
+          <button data-weight="1" class="check-btn px-3 py-1.5 text-xs rounded-lg border border-slate-200 dark:border-slate-800 hover:border-slate-400 transition-all cursor-pointer">
+            😴 Zoom Fatigue
+          </button>
+          <button data-weight="1" class="check-btn px-3 py-1.5 text-xs rounded-lg border border-slate-200 dark:border-slate-800 hover:border-slate-400 transition-all cursor-pointer">
+            🙋 New Hires Never Met
+          </button>
+          <button data-weight="1" class="check-btn px-3 py-1.5 text-xs rounded-lg border border-slate-200 dark:border-slate-800 hover:border-slate-400 transition-all cursor-pointer">
+            📉 Roadmaps Stalled
+          </button>
+        </div>
+        <p id="score-text" class="text-xs text-slate-500 font-mono italic">Select items above to check score...</p>
       </div>
 
       <div class="flex items-center gap-5 mt-8 text-sm font-medium text-slate-500 dark:text-slate-400">
-        <a href="mailto:hello@psavage.net" class="hover:text-slate-900 dark:hover:text-white transition-colors">Say hi</a>
+        <a href="https://th.linkedin.com/in/phill-savage" target="_blank" rel="noopener noreferrer" class="hover:text-slate-900 dark:hover:text-white transition-colors">Say hi</a>
         <a href="https://th.linkedin.com/in/phill-savage" target="_blank" rel="noopener noreferrer" class="hover:text-slate-900 dark:hover:text-white transition-colors">LinkedIn</a>
         <a href="https://x.com/savphill" target="_blank" rel="noopener noreferrer" class="hover:text-slate-900 dark:hover:text-white transition-colors">X</a>
         <a href="/posts" class="hover:text-slate-900 dark:hover:text-white transition-colors">Writing</a>
@@ -62,3 +78,27 @@ const strategistSchema = {
     </div>
   </div>
 </BaseLayout>
+
+<script>
+  const btns = document.querySelectorAll('.check-btn');
+  const scoreText = document.getElementById('score-text');
+  let selectedCount = 0;
+
+  btns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.classList.toggle('bg-slate-900');
+      btn.classList.toggle('text-white');
+      btn.classList.toggle('dark:bg-white');
+      btn.classList.toggle('dark:text-slate-900');
+
+      selectedCount = document.querySelectorAll('.check-btn.bg-slate-900, .check-btn.dark\\:bg-white').length;
+
+      if (scoreText) {
+        if (selectedCount === 0) scoreText.textContent = "Select items above to check score...";
+        else if (selectedCount === 1) scoreText.textContent = "Status: Time to start planning a retreat.";
+        else if (selectedCount === 2) scoreText.textContent = "Status: High priority — your team needs in-person alignment.";
+        else if (selectedCount === 3) scoreText.textContent = "Status: Critical — book flights to Chiang Mai immediately ✈️";
+      }
+    });
+  });
+</script>
