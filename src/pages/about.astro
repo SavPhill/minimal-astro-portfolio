@@ -1,32 +1,27 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-// Updated JSON-LD Schema centered on Digital Transformation & AI Automation
 const schemaData = {
   "@context": "https://schema.org",
   "@type": "ProfilePage",
   "mainEntity": {
     "@type": "Person",
     "name": "Phill Savage",
-    "jobTitle": "Digital Transformation & AI Automation Consultant | Client Director",
+    "jobTitle": "Retreat Director & Digital Strategist",
     "url": "https://psavage.net",
     "image": "https://psavage.net/images/phill.jpg",
-    "description": "Digital Transformation and AI Automation Consultant based in Chiang Mai, Thailand. Client Director at Ace Marketing Solutions. Specializing in business process audits, workflow automation, SOP design, and GEO web systems.",
+    "description": "Retreat Director at Offsite Thailand and Director at Ace Marketing Solutions. Helping remote and hybrid teams resolve friction and rebuild alignment through corporate retreats in Chiang Mai.",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Chiang Mai",
       "addressCountry": "TH"
     },
-    "knowsAbout": [
-      "Digital Transformation",
-      "AI & Workflow Automation",
-      "Business Process Audits",
-      "SOP Design & Systems",
-      "Web Strategy & Architecture",
-      "Generative Engine Optimization (GEO)",
-      "Technical SEO"
-    ],
     "worksFor": [
+      {
+        "@type": "Organization",
+        "name": "Offsite Thailand",
+        "url": "https://offsitethailand.com"
+      },
       {
         "@type": "Organization",
         "name": "Ace Marketing Solutions",
@@ -34,6 +29,7 @@ const schemaData = {
       }
     ],
     "sameAs": [
+      "https://offsitethailand.com",
       "https://acemsthailand.com",
       "https://x.com/savphill",
       "https://th.linkedin.com/in/phill-savage"
@@ -43,152 +39,66 @@ const schemaData = {
 ---
 
 <BaseLayout 
-  title="About Phill Savage | Digital Transformation & AI Automation Consultant" 
-  description="About Phill Savage — Digital Transformation & AI Automation Consultant and Client Director at Ace Marketing Solutions in Chiang Mai, Thailand. Eliminating operational bottlenecks and building web/GEO growth systems."
-  keywords={["Phill Savage", "Digital Transformation Consultant", "AI Automation Consultant Chiang Mai", "Process Audit Thailand", "Generative Engine Optimization", "Ace Marketing Solutions"]}
+  title="About Phill Savage | Retreat Director & Digital Strategist" 
+  description="About Phill Savage — Retreat Director at Offsite Thailand and Director at Ace Marketing Solutions in Chiang Mai. Resolving remote team friction through curated corporate retreats."
+  keywords={["Phill Savage", "Offsite Thailand", "Corporate Retreats Chiang Mai", "Ace Marketing Solutions", "Remote Team Building"]}
 >
-  <!-- Injects JSON-LD Entity Schema for Search Engines & LLMs -->
   <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
 
   <div class="relative overflow-hidden">
-    <!-- Background Glow FX -->
-    <div class="absolute -top-40 -left-40 w-96 h-96 bg-blue-500/10 dark:bg-blue-600/15 rounded-full blur-3xl pointer-events-none"></div>
-    <div class="absolute top-1/3 -right-40 w-96 h-96 bg-cyan-500/10 dark:bg-cyan-500/15 rounded-full blur-3xl pointer-events-none"></div>
-
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-20 relative z-10">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
       
       <!-- HERO HEADER -->
-      <header class="mb-12 pt-10" transition:animate="fade">
-        <div class="flex flex-col md:flex-row gap-8 items-center md:items-start">
+      <header class="mb-12">
+        <div class="flex flex-col sm:flex-row gap-6 items-start sm:items-center mb-6">
           <img 
             src="/images/phill.jpg" 
-            alt="Phill Savage — Digital Transformation & AI Automation Consultant" 
-            class="w-36 h-36 md:w-40 md:h-40 rounded-full object-cover ring-4 ring-blue-500/20 dark:ring-blue-400/30 shadow-2xl flex-shrink-0"
+            alt="Phill Savage" 
+            class="w-24 h-24 sm:w-28 sm:h-28 rounded-full object-cover ring-2 ring-slate-200 dark:ring-slate-800 shadow-md flex-shrink-0"
           />
-          <div class="text-center md:text-left">
-            <span class="inline-block text-xs font-mono font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400 mb-2">
-              // Digital Transformation & AI Automation Consultant
-            </span>
-            <h1 class="text-3xl sm:text-4xl md:text-5xl mb-4 font-black tracking-tight text-slate-900 dark:text-white leading-tight">
-              Fixing process bottlenecks & building growth engines in <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500 dark:from-blue-400 dark:to-cyan-300">Chiang Mai & Thailand.</span>
+          <div>
+            <h1 class="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
+              Phill Savage
             </h1>
-            <p class="text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed">
-              10+ years directing agency operations. I help B2B and tech businesses streamline operations with AI automation and SOPs—then build the high-speed web strategy to turn efficiency into pipeline.
+            <p class="text-sm font-mono text-slate-500 dark:text-slate-400 mt-1">
+              Retreat Director at Offsite Thailand • Chiang Mai
             </p>
           </div>
         </div>
       </header>
 
-      <!-- KEY METRICS / PROOF BAR -->
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 py-6 mb-12 border-y border-slate-200/60 dark:border-slate-800/60" transition:animate="fade">
-        <div class="text-center md:text-left">
-          <span class="block text-3xl font-black text-slate-900 dark:text-white font-mono">10+</span>
-          <span class="text-[11px] font-mono text-slate-500 dark:text-slate-400 uppercase tracking-wider">Years Strategy</span>
-        </div>
-        <div class="text-center md:text-left">
-          <span class="block text-3xl font-black text-slate-900 dark:text-white font-mono">Chiang Mai</span>
-          <span class="text-[11px] font-mono text-slate-500 dark:text-slate-400 uppercase tracking-wider">Primary HQ</span>
-        </div>
-        <div class="text-center md:text-left">
-          <span class="block text-3xl font-black text-slate-900 dark:text-white font-mono">100+</span>
-          <span class="text-[11px] font-mono text-slate-500 dark:text-slate-400 uppercase tracking-wider">Projects Guided</span>
-        </div>
-        <div class="text-center md:text-left">
-          <span class="block text-3xl font-black text-slate-900 dark:text-white font-mono">Ace MS</span>
-          <span class="text-[11px] font-mono text-slate-500 dark:text-slate-400 uppercase tracking-wider">Agency Directorship</span>
-        </div>
-      </div>
-
       <!-- MAIN BIO / PROSE STORY -->
-      <div class="prose prose-lg dark:prose-invert max-w-3xl mb-16 text-slate-700 dark:text-slate-300 leading-relaxed" transition:animate="fade">
+      <div class="space-y-6 text-base sm:text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
         <p>
-          I’ve spent over a decade at the intersection of business operations, digital architecture, and growth marketing—leading agency initiatives as Client Director at <strong><a href="https://acemsthailand.com" class="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300" target="_blank" rel="noopener noreferrer">Ace Marketing Solutions</a></strong> in Chiang Mai, Thailand.
-        </p>
-        
-        <p>
-          Working with <strong>over 100 brands</strong>—from scaling B2B SaaS platforms to high-growth service firms—taught me a fundamental lesson: most companies don't actually have a marketing problem. They have a process problem.
+          I’ve spent over ten years in web development, technical SEO, and digital strategy. As Director at <a href="https://acemsthailand.com" target="_blank" rel="noopener noreferrer" class="underline hover:text-slate-900 dark:hover:text-white transition-colors">Ace Marketing Solutions</a>, much of my work focused on the hospitality sector—building web platforms and managing search visibility for global brands like Hyatt Corporation alongside regional hotel groups.
         </p>
 
-        <h2 class="text-2xl font-bold mt-10 mb-4 text-slate-900 dark:text-white">Why Process Must Come Before Growth</h2>
         <p>
-          Too many growth projects fail because companies throw expensive ad campaigns, shiny AI tools, or fancy web redesigns at fundamentally messy workflows. They accumulate software bloat and founder-dependent processes without fixing the underlying drag.
-        </p>
-        
-        <p>
-          My consulting work starts with diagnosis. I map how work actually moves through a business, identify where time and revenue are leaking, and fix those bottlenecks using practical AI automations and repeatable SOPs.
+          Along the way, I also spent a lot of time in open-source security research, finding vulnerabilities in WordPress core and WooCommerce. I've always enjoyed dissecting complex systems to see where they break down under pressure.
         </p>
 
-        <h2 class="text-2xl font-bold mt-10 mb-4 text-slate-900 dark:text-white">Turning Internal Efficiency into Pipeline</h2>
         <p>
-          Once your backend operation is clean, fast, and documented, we turn that efficiency outward. We build modern, sub-second web architecture (using frameworks like Astro) paired with **Generative Engine Optimization (GEO)** and technical SEO.
+          Managing large-scale web builds meant constantly coordinating with distributed teams, external vendors, and remote agencies across different time zones. And no matter the company size or stack, remote collaboration always hit the exact same walls. Communication fell apart in Slack, roadmaps drifted, and people got burnt out on camera-off calls.
         </p>
-        
+
         <p>
-          This ensures that as search shifts toward conversational AI platforms like **ChatGPT, Perplexity, and Gemini**, your business isn't just operationally lean—it's structurally positioned to be discovered, cited, and recommended by modern answer engines.
+          I spent years trying to solve those bottlenecks with better software, stricter SOPs, and automated workflows. But after a while, the lesson was clear: you can’t fix a human connection problem with another software tool. The quickest way to clear up team friction and get everyone moving in the same direction is still putting people in the same room.
+        </p>
+
+        <p>
+          That’s what led me to my current role as Retreat Director at <a href="https://offsitethailand.com" target="_blank" rel="noopener noreferrer" class="underline hover:text-slate-900 dark:hover:text-white transition-colors">Offsite Thailand</a>. Working alongside <a href="https://boutiqthailand.com" target="_blank" rel="noopener noreferrer" class="underline hover:text-slate-900 dark:hover:text-white transition-colors">Boutiq Hospitality</a> in Chiang Mai, we host retreats that help remote and hybrid teams get out from behind their monitors, fix their communication issues, and build real trust face-to-face.
+        </p>
+
+        <p>
+          If your team is dealing with remote friction or planning your next offsite, feel free to connect on <a href="https://th.linkedin.com/in/phill-savage" target="_blank" rel="noopener noreferrer" class="underline hover:text-slate-900 dark:hover:text-white transition-colors">LinkedIn</a> or check out <a href="https://offsitethailand.com" target="_blank" rel="noopener noreferrer" class="underline hover:text-slate-900 dark:hover:text-white transition-colors">Offsite Thailand</a>.
         </p>
       </div>
 
-      <!-- CORE FOCUS / PILLARS -->
-      <section class="mb-16" transition:animate="fade">
-        <div class="mb-6">
-          <span class="text-xs font-mono uppercase tracking-widest text-blue-600 dark:text-blue-400 font-bold">// Core Expertise</span>
-          <h2 class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mt-1">Pillars of Transformation</h2>
-        </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          
-          <div class="bg-slate-50 dark:bg-slate-900/60 p-6 rounded-2xl border border-slate-200/80 dark:border-slate-800/80">
-            <div class="text-xs font-mono text-blue-600 dark:text-blue-400 uppercase tracking-wider mb-2">// 01. Process & Automation</div>
-            <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2">AI Workflows & SOP Design</h3>
-            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-              Auditing operational drag, deploying AI toolchains to automate repetitive tasks, and writing clear SOPs so your team operates smoothly without founder reliance.
-            </p>
-          </div>
-          
-          <div class="bg-slate-50 dark:bg-slate-900/60 p-6 rounded-2xl border border-slate-200/80 dark:border-slate-800/80">
-            <div class="text-xs font-mono text-blue-600 dark:text-blue-400 uppercase tracking-wider mb-2">// 02. Web Architecture & GEO</div>
-            <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2">High-Speed Search Systems</h3>
-            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-              Building sub-second edge platforms and structuring JSON-LD entity graphs so search engines and AI assistants actively recommend your brand.
-            </p>
-          </div>
-        
-          <div class="bg-slate-50 dark:bg-slate-900/60 p-6 rounded-2xl border border-slate-200/80 dark:border-slate-800/80 md:col-span-2">
-            <div class="text-xs font-mono text-blue-600 dark:text-blue-400 uppercase tracking-wider mb-2">// 03. Managed Delivery</div>
-            <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2">Agency-Backed Client Leadership</h3>
-            <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-              Through my executive role at <a href="https://acemsthailand.com" target="_blank" rel="noopener noreferrer" class="underline hover:text-blue-600">Ace Marketing Solutions</a>, we provide full implementation support—from workflow builds and web engineering to multi-currency invoicing and SLA backing.
-            </p>
-          </div>
-
-        </div>
-      </section>
-
-      <!-- CTA CARD -->
-      <div class="bg-slate-900 text-white dark:bg-slate-900/90 border border-slate-800 rounded-2xl p-8 text-left shadow-2xl relative overflow-hidden" transition:animate="fade">
-        <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-blue-500/20 rounded-full blur-2xl pointer-events-none"></div>
-        
-        <h3 class="text-2xl font-bold text-white mb-2">Ready to eliminate your business bottlenecks?</h3>
-        <p class="text-slate-300 mb-6 max-w-2xl leading-relaxed text-sm sm:text-base">
-          Whether you need a process audit, an AI automation roadmap, or a modern web strategy to capture AI search intent, let's look at your systems.
-        </p>
-        
-        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-          <a 
-            href="mailto:hello@psavage.net?subject=Process%20Audit%20%26%20Transformation" 
-            class="inline-flex items-center justify-center px-6 py-3 text-xs font-mono font-bold uppercase tracking-wider text-slate-900 bg-white hover:bg-slate-100 rounded-lg transition-colors text-center"
-          >
-            Email Phill Directly →
-          </a>
-          <a 
-            href="https://acemsthailand.com" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            class="inline-flex items-center justify-center px-6 py-3 text-xs font-mono font-bold uppercase tracking-wider text-white border border-slate-700 hover:border-slate-500 rounded-lg transition-colors text-center"
-          >
-            Visit Ace Marketing Solutions
-          </a>
-        </div>
+      <!-- FOOTER LINKS -->
+      <div class="flex items-center gap-5 mt-12 pt-8 border-t border-slate-200 dark:border-slate-800 text-sm font-medium text-slate-500 dark:text-slate-400">
+        <a href="https://offsitethailand.com" target="_blank" rel="noopener noreferrer" class="hover:text-slate-900 dark:hover:text-white transition-colors">Offsite Thailand</a>
+        <a href="https://th.linkedin.com/in/phill-savage" target="_blank" rel="noopener noreferrer" class="hover:text-slate-900 dark:hover:text-white transition-colors">LinkedIn</a>
+        <a href="https://x.com/savphill" target="_blank" rel="noopener noreferrer" class="hover:text-slate-900 dark:hover:text-white transition-colors">X</a>
       </div>
 
     </div>
