@@ -1,16 +1,17 @@
+```astro
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
 const strategistSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Phill Savage",
   "url": "https://psavage.net",
   "image": "https://psavage.net/images/phill.jpg",
-  "description": "Fixes messy business processes with AI and automation, usually on too much coffee.",
+  "description": "Founder of Offsite Thailand, designing corporate retreats that help distributed teams reconnect.",
   "worksFor": {
     "@type": "Organization",
-    "name": "Ace Marketing Solutions",
-    "url": "https://acemsthailand.com"
+    "name": "Offsite Thailand"
   },
   "address": {
     "@type": "PostalAddress",
@@ -24,65 +25,32 @@ const strategistSchema = {
   ]
 };
 ---
+
 <BaseLayout
   title="Phill Savage"
-  description="I fix messy business processes with AI and automation, usually on too much coffee."
-  keywords={["Digital Transformation", "AI Automation", "Process Design", "Chiang Mai"]}
+  description="Founder of Offsite Thailand — corporate retreats that help distributed teams reconnect."
+  keywords={["Corporate Retreats", "Offsite Planning", "Digital Transformation", "Chiang Mai", "Thailand"]}
   schema={strategistSchema}
 >
   <div class="min-h-[80vh] flex items-center">
     <div class="max-w-2xl mx-auto px-6 py-20 text-left">
-      <div class="relative w-fit mb-6">
-        <img
-          src="/images/phill.jpg"
-          alt="Phill Savage"
-          width="88"
-          height="88"
-          class="w-20 h-20 rounded-full object-cover ring-1 ring-slate-200 dark:ring-slate-700"
-        />
-        <span id="coffee-icon" class="absolute -top-2 -right-2 text-base sm:text-lg select-none origin-bottom-left" aria-hidden="true">☕</span>
-        <span id="steam-1" class="absolute -top-4 -right-1 text-[10px] sm:text-xs select-none opacity-0 transition-opacity duration-700" aria-hidden="true">〜</span>
-        <span id="steam-2" class="absolute -top-5 right-1 text-[10px] sm:text-xs select-none opacity-0 transition-opacity duration-700" aria-hidden="true">〜</span>
-      </div>
+
+      <img
+        src="/images/phill.jpg"
+        alt="Phill Savage"
+        width="88"
+        height="88"
+        class="w-20 h-20 rounded-full object-cover mb-6 ring-1 ring-slate-200 dark:ring-slate-700"
+      />
+
       <h1 class="text-2xl sm:text-3xl font-semibold text-slate-900 dark:text-white tracking-tight mb-4">
         Phill Savage
       </h1>
-      <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
-        I fix messy business processes — the manual, held-together-with-hope kind. To do this I use AI, some automation, and more coffee than is strictly advisable. I live in Chiang Mai and work alongside <a href="https://acemsthailand.com" target="_blank" rel="noopener noreferrer" class="underline decoration-slate-300 dark:decoration-slate-600 hover:decoration-blue-500 underline-offset-2">Ace Marketing Solutions</a>. I'm reasonably good at spreadsheets and occasionally over-engineer them out of pure spite for manual data entry.
-      </p>
-      <p class="text-sm text-slate-400 dark:text-slate-500 mt-4 italic flex flex-wrap items-center gap-2">
-        <span>Current caffeine level:</span>
-        <span id="caffeine-status" class="not-italic font-medium text-slate-500 dark:text-slate-400">loading…</span>
-        <span class="inline-block w-16 h-1.5 rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden shrink-0">
-          <span id="caffeine-bar" class="block h-full bg-gradient-to-r from-amber-600 to-slate-700 dark:from-amber-500 dark:to-slate-400 transition-all duration-700" style="width:0%"></span>
-        </span>
-      </p>
 
-      <div class="mt-8">
-        <button
-          id="pour-btn"
-          class="text-sm font-medium px-4 py-2 rounded-full border border-slate-300 dark:border-slate-600 hover:border-amber-500 hover:text-amber-600 dark:hover:text-amber-400 transition-colors"
-        >
-          ☕ Pour some latte art
-        </button>
-        <div id="latte-stage" class="mt-4 hidden items-center gap-3">
-          <svg viewBox="0 0 200 200" class="w-24 h-24 sm:w-28 sm:h-28 shrink-0" aria-hidden="true">
-            <circle cx="100" cy="100" r="85" fill="#5b3a1e" />
-            <circle cx="100" cy="100" r="85" fill="none" stroke="#3f2712" stroke-width="4" />
-            <path
-              id="latte-pattern"
-              d=""
-              fill="none"
-              stroke="#fdf6e3"
-              stroke-width="4"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-          <p class="text-xs text-slate-400 dark:text-slate-500 italic">
-            poured: <span id="latte-label" class="not-italic font-medium text-slate-500 dark:text-slate-400">—</span>
-          </p>
-        </div>
+      <div class="space-y-4 text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
+        <p>Hello, I'm Phill. I live in Chiang Mai, Thailand.</p>
+        <p>After spending years helping remote teams fix their digital workflows, I realized the best way to solve team friction is to get everyone in the same room.</p>
+        <p>That's why I created Offsite Thailand. Along with Boutiq Hospitality, we design corporate retreats that help distributed teams actually reconnect.</p>
       </div>
 
       <div class="flex items-center gap-5 mt-8 text-sm font-medium text-slate-500 dark:text-slate-400">
@@ -91,129 +59,8 @@ const strategistSchema = {
         <a href="https://x.com/savphill" target="_blank" rel="noopener noreferrer" class="hover:text-slate-900 dark:hover:text-white transition-colors">X</a>
         <a href="/posts" class="hover:text-slate-900 dark:hover:text-white transition-colors">Writing</a>
       </div>
+
     </div>
   </div>
 </BaseLayout>
-
-<script>
-  // --- Caffeine decay model ---
-  const HALF_LIFE_HOURS = 5;
-  const DOSES = [8, 13]; // hours of day you typically drink coffee
-  const DOSE_MG = 95;
-  const MAX_MG = 190;
-
-  function levelNow(): number {
-    const now = new Date();
-    const hourNow = now.getHours() + now.getMinutes() / 60;
-    return DOSES.reduce((total, doseHour) => {
-      let elapsed = hourNow - doseHour;
-      if (elapsed < 0) elapsed += 24;
-      return total + DOSE_MG * Math.pow(0.5, elapsed / HALF_LIFE_HOURS);
-    }, 0);
-  }
-
-  function labelFor(pct: number): string {
-    if (pct > 80) return "concerning";
-    if (pct > 55) return "fully operational";
-    if (pct > 30) return "functional";
-    if (pct > 10) return "fading";
-    return "please send coffee";
-  }
-
-  function renderCaffeine() {
-    const mg = levelNow();
-    const pct = Math.min(100, Math.round((mg / MAX_MG) * 100));
-
-    const statusEl = document.getElementById("caffeine-status");
-    const barEl = document.getElementById("caffeine-bar");
-    const iconEl = document.getElementById("coffee-icon");
-    const steam1 = document.getElementById("steam-1");
-    const steam2 = document.getElementById("steam-2");
-
-    if (statusEl) statusEl.textContent = labelFor(pct);
-    if (barEl) barEl.style.width = `${pct}%`;
-
-    if (steam1) steam1.style.opacity = pct > 15 ? String(Math.min(1, pct / 100)) : "0";
-    if (steam2) steam2.style.opacity = pct > 40 ? String(Math.min(1, (pct - 20) / 100)) : "0";
-
-    if (iconEl) {
-      if (pct > 80) {
-        iconEl.classList.add("animate-jitter");
-      } else {
-        iconEl.classList.remove("animate-jitter");
-      }
-    }
-  }
-
-  renderCaffeine();
-  setInterval(renderCaffeine, 60_000);
-
-  // --- Latte art generator ---
-  type LattePattern = { name: string; d: string };
-
-  const LATTE_PATTERNS: LattePattern[] = [
-    {
-      name: "heart",
-      d: "M100,60 C130,40 165,65 150,100 C165,120 130,150 100,175 C70,150 35,120 50,100 C35,65 70,40 100,60 Z",
-    },
-    {
-      name: "rosette",
-      d: "M100,172 C100,140 100,108 100,78 M100,150 C80,141 66,131 56,121 M100,150 C120,141 134,131 144,121 M100,128 C83,120 72,112 64,104 M100,128 C117,120 128,112 136,104 M100,106 C87,99 78,92 72,86 M100,106 C113,99 122,92 128,86",
-    },
-    {
-      name: "tulip",
-      d: "M100,150 C120,136 128,116 114,102 C127,88 119,68 100,78 C81,68 73,88 86,102 C72,116 80,136 100,150 Z M100,108 C111,99 116,88 107,80 C116,73 111,62 100,69 C89,62 84,73 93,80 C84,88 89,99 100,108 Z",
-    },
-  ];
-
-  function pourLatteArt() {
-    const stage = document.getElementById("latte-stage");
-    const path = document.getElementById("latte-pattern") as SVGPathElement | null;
-    const label = document.getElementById("latte-label");
-    if (!path) return;
-
-    stage?.classList.remove("hidden");
-    stage?.classList.add("flex");
-
-    const pick = LATTE_PATTERNS[Math.floor(Math.random() * LATTE_PATTERNS.length)];
-    path.setAttribute("d", pick.d);
-
-    const length = path.getTotalLength();
-    path.style.transition = "none";
-    path.style.strokeDasharray = String(length);
-    path.style.strokeDashoffset = String(length);
-
-    // force reflow so the transition below actually animates
-    path.getBoundingClientRect();
-
-    path.style.transition = "stroke-dashoffset 1.4s ease";
-    path.style.strokeDashoffset = "0";
-
-    if (label) label.textContent = pick.name;
-  }
-
-  document.getElementById("pour-btn")?.addEventListener("click", pourLatteArt);
-</script>
-
-<style>
-  @keyframes jitter {
-    0%, 100% { transform: translate(0, 0) rotate(0deg); }
-    25% { transform: translate(-1px, 1px) rotate(-3deg); }
-    50% { transform: translate(1px, -1px) rotate(3deg); }
-    75% { transform: translate(-1px, -1px) rotate(-2deg); }
-  }
-  .animate-jitter {
-    animation: jitter 0.25s infinite;
-  }
-  #steam-1, #steam-2 {
-    animation: rise 2.5s ease-in-out infinite;
-  }
-  #steam-2 {
-    animation-delay: 0.6s;
-  }
-  @keyframes rise {
-    0% { transform: translateY(0); opacity: inherit; }
-    50% { transform: translateY(-4px); }
-    100% { transform: translateY(0); }
-  }
-</style>
+```
