@@ -1,9 +1,9 @@
 export const SITE = {
   name: "Phill Savage",
-  headline: "Digital Transformation through Corporate Retreats",
-  title: "Transforming remote business through corporate retreat planning",
+  headline: "Phill Savage – Corporate Retreats & Security Research",
+  title: "Phill Savage – Corporate Retreats & Security Research",
   description:
-    "Planning corporate retreats for remotely distributed teams..",
+    "Personal site of Phill Savage. Corporate retreats for remote teams in Thailand, virtual team building, and open-source security research.",
   url: "https://psavage.net",
   author: "Phill",
 } as const;
