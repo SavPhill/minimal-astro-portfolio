@@ -3,12 +3,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import cveData from '../data/cves.json';
 ---
 
-<BaseLayout title="Security Research | CVEs">
+<BaseLayout 
+  title="Security Research" 
+  description="List of WordPress, WooCommerce and related vulnerabilities reported by Phill Savage."
+>
   <div class="max-w-4xl mx-auto">
     <h1 class="text-5xl font-bold mb-8">Security Research</h1>
     <div class="prose prose-lg dark:prose-invert max-w-none leading-relaxed" transition:animate="fade">
       <p>
-        I've made quite a few contribution to open source projects and have been actively involved in security research, especially within the WordPress ecosystem.</p>
+        I still enjoy looking for places where systems break. Here’s the public trail of the WordPress and related vulnerabilities I’ve reported over the years.
+      </p>
     
     <div class="overflow-x-auto">
       <table class="w-full text-left border-collapse">
